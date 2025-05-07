@@ -1,0 +1,22 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "course-icsa"
+  author: "Ricardo Semião e Castro"
+  date: "07/05/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    template: assets\template\rsquartobook_html.template
+    theme:
+      - cosmo
+      - brand
