@@ -3,13 +3,39 @@ project:
   output-dir: docs
 
 book:
-  title: "course-icsa"
+  title: "Ciência da Computação: Introdução e Aplicações"
   author: "Ricardo Semião e Castro"
   date: "07/05/2025"
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
+    - part: "Ciência da Computação"
+      chapters:
+        - 1-intro_cs.qmd
+        - 1-theoretical_cs.qmd
+        - 1-computer_architecture.qmd
+        - 1-programming_software.qmd
+        - 1-computer_systems.qmd
+    - part: "Baixo Nível"
+      chapters:
+        - 2-intro_low.qmd
+        - 2-c_cpp.qmd
+        - 2-go.qmd
+    - part: "Scripting"
+      chapters:
+        - 3-intro_scripting.qmd
+        - 3-julia.qmd
+    - part: "WebDev"
+      chapters:
+        - 4-intro_webdev.qmd
+        - 4-html_css.qmd
+        - 4-javascript.qmd
+        - 4-frameworks.qmd
+    - part: "Outros Tópicos"
+      chapters:
+        - 5-databases.qmd
+        - 5-good_practices.qmd
+        - 5-version_control.qmd
     - references.qmd
 
 bibliography: references.bib

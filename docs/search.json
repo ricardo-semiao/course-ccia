@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ciência da Computação: Introdução e Aplicações",
+    "section": "",
+    "text": "Ricardo Semião e Castro\n            July 5, 2025\n        \n        \n\nBem Vindo!\nEste livro contém meus estudos sobre ciência da computação. Meu objetivo era fazer um material abrangente, que explicasse os conceitos básicos para entender como computadores, hardware e software, funcionam.\nEsse estudo foi realizado de modo a gerar insumos para as tarefas que estão mais inclusas nos meus interesses, principalmente ciência de dados e desenvolvimento de aplicações web.\nApós um primeiro capítulo sobre ciência de dados no geral, apresento materiais básicos de algumas linguagens, utilizando-as para introduzir conceitos da programação. Essas linguagens fazem parte do meu stack atual. As divido em “low levels”, “scripting” (as que eu mais utilizo, R e Python com seus próprios livros separados), e “web dev”.\nDisclaimer: este material é feito de maneira flexível, muitos conceitos são simplificados e imprecisos; este material é uma curadoria, releitura, e expansão de materiais já existentes, tento citar todos nas referências ao final do livro.\nDisclaimer 2: este material está em construção, em um momento completamente inicial.",
+    "crumbs": [
+      "Bem Vindo!"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "1.1 Parte 1: Ciência da Computação\nA organização deste livro é descrita abaixo.\nAqui são apresentados os temas básicos da ciência da computação como um todo. Os capítulos são descritos abaixo:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#parte-1-ciência-da-computação",
+    "href": "intro.html#parte-1-ciência-da-computação",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "Teoria da Computação: em construção.\nArquitetura de Computadores: em construção.\nProgramação e Engenharia de Software: em construção.\nSistemas de Computadores: em construção.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#parte-2-linguagens-low-level",
+    "href": "intro.html#parte-2-linguagens-low-level",
+    "title": "1  Introdução",
+    "section": "1.2 Parte 2: Linguagens Low-Level",
+    "text": "1.2 Parte 2: Linguagens Low-Level\nAqui são apresentados conceitos básicos de linguagens de baixo nível. Os capítulos são descritos abaixo:\n\nO Baixo Nível: em construção.\nC e C++: em construção.\nGo: em construção.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#parte-3-linguagens-de-scripting",
+    "href": "intro.html#parte-3-linguagens-de-scripting",
+    "title": "1  Introdução",
+    "section": "1.3 Parte 3: Linguagens de Scripting",
+    "text": "1.3 Parte 3: Linguagens de Scripting\nAqui são apresentados conceitos básicos de linguagens de scripting. Os capítulos são descritos abaixo:\n\nScripting: em construção.\nJulia: em construção.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#parte-4-linguagens-de-web-dev",
+    "href": "intro.html#parte-4-linguagens-de-web-dev",
+    "title": "1  Introdução",
+    "section": "1.4 Parte 4: Linguagens de Web Dev",
+    "text": "1.4 Parte 4: Linguagens de Web Dev\nAqui são apresentados conceitos básicos de linguagens de web dev. Os capítulos são descritos abaixo:\n\nHTML/CSS: em construção.\nJavaScript: em construção.\nFrameworks WebDev: em construção.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#parte-5-outros-temas",
+    "href": "intro.html#parte-5-outros-temas",
+    "title": "1  Introdução",
+    "section": "1.5 Parte 5: Outros Temas",
+    "text": "1.5 Parte 5: Outros Temas\nAqui são apresentados outros conceitos relevantes, como Git/GitHub e databases.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  }
+]

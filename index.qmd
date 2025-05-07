@@ -1,5 +1,11 @@
-# Preface {.unnumbered}
+# Bem Vindo! {.unnumbered}
 
-This is a Quarto book.
+Este livro contém meus estudos sobre ciência da computação. Meu objetivo era fazer um material abrangente, que explicasse os conceitos básicos para entender como computadores, _hardware_ e _software_, funcionam.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Esse estudo foi realizado de modo a gerar insumos para as tarefas que estão mais inclusas nos meus interesses, principalmente ciência de dados e desenvolvimento de aplicações web.
+
+Após um primeiro capítulo sobre ciência de dados no geral, apresento materiais básicos de algumas linguagens, utilizando-as para introduzir conceitos da programação. Essas linguagens fazem parte do meu _stack_ atual. As divido em "low levels", "scripting" (as que eu mais utilizo, R e Python com seus próprios livros separados), e "web dev".
+
+**Disclaimer:** este material é feito de maneira flexível, muitos conceitos são simplificados e imprecisos; este material é uma curadoria, releitura, e expansão de materiais já existentes, tento citar todos nas referências ao final do livro.
+
+**Disclaimer 2:** este material está em construção, em um momento completamente inicial.

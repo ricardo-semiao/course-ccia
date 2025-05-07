@@ -1,5 +1,44 @@
-# Introduction
+# Introdução
 
-This is a book created from markdown and executable code.
+A organização deste livro é descrita abaixo.
 
-See @knuth84 for additional discussion of literate programming.
+
+## Parte 1: Ciência da Computação
+
+Aqui são apresentados os temas básicos da ciência da computação como um todo. Os capítulos são descritos abaixo:
+
+- Teoria da Computação: **em construção**.
+- Arquitetura de Computadores: **em construção**.
+- Programação e Engenharia de Software: **em construção**.
+- Sistemas de Computadores: **em construção**.
+
+
+## Parte 2: Linguagens _Low-Level_
+
+Aqui são apresentados conceitos básicos de linguagens de baixo nível. Os capítulos são descritos abaixo:
+
+- O Baixo Nível: **em construção**.
+- C e C++: **em construção**.
+- Go: **em construção**.
+
+
+## Parte 3: Linguagens de _Scripting_
+
+Aqui são apresentados conceitos básicos de linguagens de scripting. Os capítulos são descritos abaixo:
+
+- Scripting: **em construção**.
+- Julia: **em construção**.
+
+
+## Parte 4: Linguagens de _Web Dev_
+
+Aqui são apresentados conceitos básicos de linguagens de web dev. Os capítulos são descritos abaixo:
+
+- HTML/CSS: **em construção**.
+- JavaScript: **em construção**.
+- Frameworks WebDev: **em construção**.
+
+
+## Parte 5: Outros Temas
+
+Aqui são apresentados outros conceitos relevantes, como Git/GitHub e databases.
