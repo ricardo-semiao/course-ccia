@@ -11,7 +11,7 @@ book_pages = [
 
 with open("assets/template/rsquartobook_html.template", "r", encoding="utf-8") as f:
     content = f.readlines()
-    ext_links = [re.findall(r'"(/[^"]+)"', line) for line in content]
+    ext_links = [re.findall(r'"(/[^"]*)"', line) for line in content]
     ext_links = [matches[0] for matches in ext_links if matches]
 
 for page in book_pages:

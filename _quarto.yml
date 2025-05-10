@@ -15,7 +15,8 @@ bibliography: references.bib
 book:
   title: "Ciência da Computação: Introdução e Aplicações"
   author: "Ricardo Semião e Castro"
-  date: "07/05/2025"
+  date: today
+  date-format: "DD/MM/YYYY"
   site-url: https://ricardo-semiao.github.io/course-ccia/
   chapters:
     - index.qmd

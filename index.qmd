@@ -1,4 +1,4 @@
-# Ciência da Computação: Introdução e Aplicações
+# Ciência da Computação: Introdução e Aplicações {.unnumbered}
 
 This book contains my studies on computer science. My goal was to create a comprehensive material that explains the basic concepts to understand how computers, _hardware_, and _software_ work. It exists in the context of my other materials, each focusing, within its topic, on (i) explaining the most prominent theoretical concepts and demonstrating the use of the most useful tools for my _workflow_. It is written in Portuguese, and I will only translate it to English in the far future.
 
