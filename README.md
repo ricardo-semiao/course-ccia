@@ -8,12 +8,17 @@ Este livro contém meus estudos sobre ciência da computação. Meu objetivo era
 
 - "Ciência da Computação: Introdução e Aplicações" (este livro): conceitos básicos de ciência da computação, de maneira bem simplificada. Define a fundação para os outros livros, focados em linguagens/ferramentas específicas.
 - Linguagens de baixo nível, e outros tópicos (também neste livro): conceitos básicos de linguagens de baixo nível, databases, controle de versão, para empoderar seu uso como acessórios em projetos.
-- "Julia: Performance e Ciência" (também neste livro): Typing, multiple dispatch, e performance; programação científica.
-- "R: Fundamentos e Ciência de Dados" ([course-rfcd](https://ricardo-semiao.github.io/course-rfcd/)): metaprogramação e programação funcional; manipulação e visualização de dados.
+- "Julia: Performance e Ciência" ([course-rfcd](https://ricardo-semiao.github.io/course-rfcd/)): Typing, multiple dispatch, e performance; programação científica.
+- "R: Fundamentos e Ciência de Dados" (repositório privado): metaprogramação e programação funcional; manipulação e visualização de dados.
 - "Python: Automação, Apps, e Machine Learning" ([course-paaml](https://ricardo-semiao.github.io/course-paaml/)): oop; automação, desenvolvimento de aplicações, e modelagem de machine learning.
 
 **Disclaimer:** este material é feito de maneira flexível, muitos conceitos são simplificados e imprecisos; este material é uma curadoria, releitura, e expansão de materiais já existentes, tento citar todos nas referências ao final do livro.
 
 **Disclaimer:** este material está em construção, em um momento completamente inicial.
 
-Qualquer tipo de comentário, por favor envie em meu email [ricardo.semiao@outlook.com](mailto:ricardo.semiao@outlook.com).
+Para qualquer tipo de comentário, envie um email ([ricardo.semiao@outlook.com](mailto:ricardo.semiao@outlook.com)) ou abra uma [issue](https://github.com/ricardo-semiao/course-ccia/issues)/[discussion](https://github.com/ricardo-semiao/course-ccia/discussions) (o que for mais adequado).
+
+
+## Construção
+
+Esse livro é feito com Quarto, utilizando o meu tema customizado [rsquartobook](https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rsquartobook), disponível no meu repositório de temas e ferramentas [ricardo-semiao](https://github.com/ricardo-semiao/ricardo-semiao).

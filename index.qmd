@@ -1,4 +1,4 @@
-# Ciência da Computação: Introdução e Aplicações {.unnumbered}
+# Bem Vindo! {.unnumbered}
 
 This book contains my studies on computer science. My goal was to create a comprehensive material that explains the basic concepts to understand how computers, _hardware_, and _software_ work. It exists in the context of my other materials, each focusing, within its topic, on (i) explaining the most prominent theoretical concepts and demonstrating the use of the most useful tools for my _workflow_. It is written in Portuguese, and I will only translate it to English in the far future.
 
@@ -16,4 +16,9 @@ Este livro contém meus estudos sobre ciência da computação. Meu objetivo era
 
 **Disclaimer:** este material está em construção, em um momento completamente inicial.
 
-Qualquer tipo de comentário, por favor envie em meu email [ricardo.semiao@outlook.com](mailto:ricardo.semiao@outlook.com).
+Para qualquer tipo de comentário, envie um email ([ricardo.semiao@outlook.com](mailto:ricardo.semiao@outlook.com)) ou abra uma [issue](https://github.com/ricardo-semiao/course-ccia/issues)/[discussion](https://github.com/ricardo-semiao/course-ccia/discussions) (o que for mais adequado).
+
+
+## Construção
+
+Esse livro é feito com Quarto, utilizando o meu tema customizado [rsquartobook](https://github.com/ricardo-semiao/ricardo-semiao/tree/main/themes/rsquartobook), disponível no meu repositório de temas e ferramentas [ricardo-semiao](https://github.com/ricardo-semiao/ricardo-semiao).
