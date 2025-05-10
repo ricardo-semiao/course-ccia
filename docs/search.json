@@ -4,69 +4,553 @@
     "href": "index.html",
     "title": "Ciência da Computação: Introdução e Aplicações",
     "section": "",
-    "text": "Ricardo Semião e Castro\n            July 5, 2025\n        \n        \n\nBem Vindo!\nEste livro contém meus estudos sobre ciência da computação. Meu objetivo era fazer um material abrangente, que explicasse os conceitos básicos para entender como computadores, hardware e software, funcionam.\nEsse estudo foi realizado de modo a gerar insumos para as tarefas que estão mais inclusas nos meus interesses, principalmente ciência de dados e desenvolvimento de aplicações web.\nApós um primeiro capítulo sobre ciência de dados no geral, apresento materiais básicos de algumas linguagens, utilizando-as para introduzir conceitos da programação. Essas linguagens fazem parte do meu stack atual. As divido em “low levels”, “scripting” (as que eu mais utilizo, R e Python com seus próprios livros separados), e “web dev”.\nDisclaimer: este material é feito de maneira flexível, muitos conceitos são simplificados e imprecisos; este material é uma curadoria, releitura, e expansão de materiais já existentes, tento citar todos nas referências ao final do livro.\nDisclaimer 2: este material está em construção, em um momento completamente inicial.",
+    "text": "Ricardo Semião e Castro\n            July 5, 2025\n        \n        \n\n1 Ciência da Computação: Introdução e Aplicações\nThis book contains my studies on computer science. My goal was to create a comprehensive material that explains the basic concepts to understand how computers, hardware, and software work. It exists in the context of my other materials, each focusing, within its topic, on (i) explaining the most prominent theoretical concepts and demonstrating the use of the most useful tools for my workflow. It is written in Portuguese, and I will only translate it to English in the far future.\n\nEste livro contém meus estudos sobre ciência da computação. Meu objetivo era fazer um material abrangente, que explicasse os conceitos básicos para entender como computadores, hardware e software, funcionam. Ele existe no contexto dos meus outros materiais, cada um foca, dentro de seu tópico, em (i) explicar os conceitos teóricos mais presentes e demonstrar o uso das ferramentas mais úteis para meu workflow:\n\n“Ciência da Computação: Introdução e Aplicações” (este livro): conceitos básicos de ciência da computação, de maneira bem simplificada. Define a fundação para os outros livros, focados em linguagens/ferramentas específicas.\nLinguagens de baixo nível, e outros tópicos (também neste livro): conceitos básicos de linguagens de baixo nível, databases, controle de versão, para empoderar seu uso como acessórios em projetos.\n“Julia: Performance e Ciência” (também neste livro): Typing, multiple dispatch, e performance; programação científica.\n“R: Fundamentos e Ciência de Dados” (course-rfcd): metaprogramação e programação funcional; manipulação e visualização de dados.\n“Python: Automação, Apps, e Machine Learning” (course-paaml): oop; automação, desenvolvimento de aplicações, e modelagem de machine learning.\n\nDisclaimer: este material é feito de maneira flexível, muitos conceitos são simplificados e imprecisos; este material é uma curadoria, releitura, e expansão de materiais já existentes, tento citar todos nas referências ao final do livro.\nDisclaimer: este material está em construção, em um momento completamente inicial.\nQualquer tipo de comentário, por favor envie em meu email ricardo.semiao@outlook.com.",
     "crumbs": [
-      "Bem Vindo!"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Ciência da Computação: Introdução e Aplicações</span>"
     ]
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introdução",
+    "title": "2  Introdução",
     "section": "",
-    "text": "1.1 Parte 1: Ciência da Computação\nA organização deste livro é descrita abaixo.\nAqui são apresentados os temas básicos da ciência da computação como um todo. Os capítulos são descritos abaixo:",
+    "text": "2.1 Parte 1: Ciência da Computação\nA organização deste livro é descrita abaixo.\nAqui são apresentados os temas básicos da ciência da computação como um todo. Os capítulos são descritos abaixo:",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
   },
   {
     "objectID": "intro.html#parte-1-ciência-da-computação",
     "href": "intro.html#parte-1-ciência-da-computação",
-    "title": "1  Introdução",
+    "title": "2  Introdução",
     "section": "",
-    "text": "Teoria da Computação: em construção.\nArquitetura de Computadores: em construção.\nProgramação e Engenharia de Software: em construção.\nSistemas de Computadores: em construção.",
+    "text": "Teoria da Computação: Introdução aos conceitos fundamentais da teoria da computação.\nArquitetura de Computadores: Consolidação prática de conceitos de arquitetura computacional.\nProgramação e Engenharia de Software: Conceitos gerais para construir uma base em linguagens de programação.\nSistemas de Computadores: Conceitos teóricos e práticos sobre sistemas computacionais e comunicação.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
   },
   {
     "objectID": "intro.html#parte-2-linguagens-low-level",
     "href": "intro.html#parte-2-linguagens-low-level",
-    "title": "1  Introdução",
-    "section": "1.2 Parte 2: Linguagens Low-Level",
-    "text": "1.2 Parte 2: Linguagens Low-Level\nAqui são apresentados conceitos básicos de linguagens de baixo nível. Os capítulos são descritos abaixo:\n\nO Baixo Nível: em construção.\nC e C++: em construção.\nGo: em construção.",
+    "title": "2  Introdução",
+    "section": "2.2 Parte 2: Linguagens Low-Level",
+    "text": "2.2 Parte 2: Linguagens Low-Level\nAqui são apresentados conceitos básicos de linguagens de baixo nível. Os capítulos são descritos abaixo:\n\nO Baixo Nível: Explicação de conceitos básicos de linguagens de baixo nível.\nC e C++: Exemplificação de conceitos e familiarização com C e C++.\nGo: Introdução ao Go como alternativa simples e eficiente para programação de baixo nível.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
   },
   {
     "objectID": "intro.html#parte-3-linguagens-de-scripting",
     "href": "intro.html#parte-3-linguagens-de-scripting",
-    "title": "1  Introdução",
-    "section": "1.3 Parte 3: Linguagens de Scripting",
-    "text": "1.3 Parte 3: Linguagens de Scripting\nAqui são apresentados conceitos básicos de linguagens de scripting. Os capítulos são descritos abaixo:\n\nScripting: em construção.\nJulia: em construção.",
+    "title": "2  Introdução",
+    "section": "2.3 Parte 3: Linguagens de Scripting",
+    "text": "2.3 Parte 3: Linguagens de Scripting\nAqui são apresentados conceitos básicos de linguagens de scripting. Os capítulos são descritos abaixo:\n\nScripting: Introdução geral a linguagens de scripting.\nJulia: Curso focado em alta performance e programação científica com Julia.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
   },
   {
     "objectID": "intro.html#parte-4-linguagens-de-web-dev",
     "href": "intro.html#parte-4-linguagens-de-web-dev",
-    "title": "1  Introdução",
-    "section": "1.4 Parte 4: Linguagens de Web Dev",
-    "text": "1.4 Parte 4: Linguagens de Web Dev\nAqui são apresentados conceitos básicos de linguagens de web dev. Os capítulos são descritos abaixo:\n\nHTML/CSS: em construção.\nJavaScript: em construção.\nFrameworks WebDev: em construção.",
+    "title": "2  Introdução",
+    "section": "2.4 Parte 4: Linguagens de Web Dev",
+    "text": "2.4 Parte 4: Linguagens de Web Dev\nAqui são apresentados conceitos básicos de linguagens de web dev. Os capítulos são descritos abaixo:\n\nHTML/CSS: Resumo prático e aplicado de HTML e CSS.\nJavaScript: Introdução básica para entender e depurar códigos em JavaScript.\nFrameworks WebDev: Explicação sobre frameworks web e escolha de um para estudo.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
   },
   {
     "objectID": "intro.html#parte-5-outros-temas",
     "href": "intro.html#parte-5-outros-temas",
-    "title": "1  Introdução",
-    "section": "1.5 Parte 5: Outros Temas",
-    "text": "1.5 Parte 5: Outros Temas\nAqui são apresentados outros conceitos relevantes, como Git/GitHub e databases.",
+    "title": "2  Introdução",
+    "section": "2.5 Parte 5: Outros Temas",
+    "text": "2.5 Parte 5: Outros Temas\nAqui são apresentados outros conceitos relevantes, como Git/GitHub e databases.\n\nVersion Control: Explicação sobre controle de versão e uso de Git e GitHub.\nDatabases: Conceitos básicos sobre bancos de dados e SQL, com tutorial de SQLite.\nGood Practices: Conceitos gerais de boas práticas em projetos e código.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "1-overview_theory.html",
+    "href": "1-overview_theory.html",
+    "title": "3  Teoria da Computação",
+    "section": "",
+    "text": "3.1 Overview\nDisclaimer: em construção.\nO objetivo da parte 1 é contextualizar como um computador funciona, e como computação é entendida. Isto gerará insumos para entender como pensar em algorítimos, e entender o funcionamento das ferramentas de programação.\nNeste primeiro capítulo, definirei a visão geral do campo. A seguir, falarei da CC teórica: teoria da computação, informação e código, estruturas, e algorítimos.\nBig picture, e o que será tratado em cada capítulo.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Teoria da Computação</span>"
+    ]
+  },
+  {
+    "objectID": "1-overview_theory.html#informação",
+    "href": "1-overview_theory.html#informação",
+    "title": "3  Teoria da Computação",
+    "section": "3.2 Informação",
+    "text": "3.2 Informação\nComo informação é representada por binário, e outros sistemas em cima disso.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Teoria da Computação</span>"
+    ]
+  },
+  {
+    "objectID": "1-overview_theory.html#computação",
+    "href": "1-overview_theory.html#computação",
+    "title": "3  Teoria da Computação",
+    "section": "3.3 Computação",
+    "text": "3.3 Computação\nComo informação é processada. Circuitos lógicos e o que pode ser automatizado.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Teoria da Computação</span>"
+    ]
+  },
+  {
+    "objectID": "1-overview_theory.html#estruturas-de-dados-e-algorítimos",
+    "href": "1-overview_theory.html#estruturas-de-dados-e-algorítimos",
+    "title": "3  Teoria da Computação",
+    "section": "3.4 Estruturas de Dados e Algorítimos",
+    "text": "3.4 Estruturas de Dados e Algorítimos\nEstruturas de dados e algorítimos",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Teoria da Computação</span>"
+    ]
+  },
+  {
+    "objectID": "1-overview_theory.html#linguagens-de-programação",
+    "href": "1-overview_theory.html#linguagens-de-programação",
+    "title": "3  Teoria da Computação",
+    "section": "3.5 Linguagens de Programação",
+    "text": "3.5 Linguagens de Programação\nFuncionamento geral, características e classificação dos designs.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Teoria da Computação</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_architecture.html",
+    "href": "1-computer_architecture.html",
+    "title": "4  Arquitetura de Computadores",
+    "section": "",
+    "text": "4.1 Basics of Information and Computer Architeture\nDisclaimer: em construção.\nO objetivo deste capítulo é consolidar os conceitos do capítulo anterior em termos práticos. Como, na prática, conseguimos sair de um fio de energia para uma linguagem de programação?\nEscrevi o plano abaixo originalmente em inglês, mas irei traduzi-lo.\nMissing: linguistics, and buses.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Arquitetura de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_architecture.html#basics-of-information-and-computer-architeture",
+    "href": "1-computer_architecture.html#basics-of-information-and-computer-architeture",
+    "title": "4  Arquitetura de Computadores",
+    "section": "",
+    "text": "What is it: From a wire of energy, how can we get information? by controling its flow, yielding binary sequences.\nHow it is transported: What is needed for that: control flow hardware (briefly explain how semiconductors work, and diodes, transistors, capacitors, etc.); clocks, to cont the sequences (briefly explain how they work).\n\nTopics that must be cited: voltage tresholds and truncation; How capacitors relate to logic gates (useful for the next sections); clock frequency and dynamic clocking; clock distribution, edge triggering; multiple clock sync\n\nHow it is stored: To perform AND(true, true), we need to remember the AND, the true, and the true, that is, we need memory. Briefly explain how capacitor and flip-flop memory works. Without getting into much detail, contextualize that we have registers, cache, ram, and long-term memory, ROM, all with the same word scheme.\n\nTopics that must be cited: combinational and sequential logic (via flip flops); volatile and fixed memory; row and column addressing and reading; memory addresses; MMU\n\nHow is it interpreted: we need to be able to interpret 0/1 into a more comprehensive format, this is a linguistics task! bits, bytes, and words. briefly contextualize the different widths of words. talk about how we create a dictionary of how to separate words, and sets of operations, values, etc; that is, explain ISA (examples of 32bit). Explain machine code, and its abstraction assembly, explain it talking about it like a language\n\nTopics that must be covered: opcode, and the various different “modes” of acessing values (constant, registers, memory adresses, memory addr in registers, bigger-than-word values); how each operation-mode defines how the word is interpreted\n\nHow is it operated: ALU and memory operations, logic gates and how they are phgisically implemented, combining simple to get complex operations\nHow is it orchestrated: clock cycles; types of registers (PC); reading from outer memory onto registers first; CU: reading and decoding instructions, sending control signals (explain as it opening gates to direct the read-from-memory-words)",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Arquitetura de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_architecture.html#macro-computer-architecture",
+    "href": "1-computer_architecture.html#macro-computer-architecture",
+    "title": "4  Arquitetura de Computadores",
+    "section": "4.2 Macro Computer Architecture",
+    "text": "4.2 Macro Computer Architecture\nList of all the computer components, in order of activation.\nStep 1: Power Supply Activation\n\nPower Source (PSU):\n\nWhen the computer is connected to a power source and the power button is pressed, the Power Supply Unit (PSU) converts AC (alternating current) from the wall outlet into DC (direct current) at various voltage levels (e.g., +12V, +5V, +3.3V).\nThe PSU sends a small amount of power (called standby power, or +5VSB) to the motherboard to power essential circuits, such as the power button logic.\n\nPower Good Signal:\n\nOnce the PSU determines that all voltage rails are stable, it sends a Power Good Signal (PG) to the motherboard, indicating that power is ready for distribution.\n\n\nStep 2: Motherboard and Chipset Initialization\n\nChipset Wake-Up:\n\nThe motherboard chipset (including embedded controllers and voltage regulators) receives power. These manage distribution to other components on the motherboard.\nVoltage regulators ensure that every component (CPU, GPU, RAM, etc.) receives the correct voltage and current.\n\nClock Signal Activation:\n\nThe system clock starts generating a stable square wave signal, synchronizing timing for all components.\n\n\nStep 3: CPU Initialization\n\nCPU Power-Up:\n\nThe CPU is powered on and begins its first operation. It starts fetching instructions from a predefined memory location, typically set to the BIOS/UEFI firmware address.\n\nReset Vector Fetch:\n\nThe CPU looks at the reset vector, a specific memory address that points to the start of the BIOS/UEFI firmware program.\n\n\nStep 4: BIOS/UEFI Execution\n\nFirmware Execution:\n\nThe CPU starts executing the BIOS/UEFI firmware stored in non-volatile flash memory on the motherboard. The firmware is responsible for initializing the hardware and preparing the system to boot an operating system.\n\nPOST (Power-On Self-Test):\n\nThe BIOS/UEFI performs a series of hardware checks, called the Power-On Self-Test (POST). Key components checked include:\n\nCPU: Verified for basic functionality.\nRAM: A memory test is performed to ensure that memory modules are functional and accessible.\nGPU: The graphics card is initialized, and a basic video signal is sent to the monitor.\nStorage Devices: The BIOS/UEFI checks for the presence of storage devices (e.g., HDDs, SSDs).\nPeripherals: Key peripherals like keyboards, mice, and USB devices are checked.\n\n\nPeripheral Initialization:\n\nThe chipset initializes I/O controllers, such as:\n\nUSB controllers for attached peripherals.\nNetwork interfaces (e.g., Ethernet or Wi-Fi).\nAudio controllers and other onboard devices.\n\n\nSystem Configuration:\n\nThe BIOS/UEFI reads configuration data (e.g., boot order, hardware settings) stored in CMOS memory or NVRAM (Non-Volatile RAM).\n\n\nStep 5: Bootloader and OS Handoff\n\nBoot Device Selection:\n\nThe BIOS/UEFI determines the boot device (e.g., SSD, HDD, USB, or network) based on the boot order configured.\n\nBootloader Execution:\n\nThe BIOS/UEFI loads the bootloader (e.g., GRUB for Linux, Boot Manager for Windows) from the boot sector of the selected boot device into RAM.\nThe CPU begins executing the bootloader.\n\nOS Kernel Loading:\n\nThe bootloader loads the operating system kernel into memory, and the kernel initializes system-level hardware drivers.\n\n\nStep 6: Hardware and Software Handshaking\n\nDevice Driver Initialization:\n\nOnce the OS takes over, it loads device drivers for various hardware components:\n\nCPU cores and threads (scheduler initialization).\nGPU and VRAM for graphical interfaces.\nNetwork interfaces for connectivity.\nStorage drivers for managing HDD/SSD access.\n\n\nSystem Resources Allocation:\n\nThe operating system assigns memory addresses and I/O ports to hardware devices for communication.\n\n\nMissing: where each firmware lives, and what exactly are they; more on hard drives (partitions, file systems); more on components (from a pc builder standpoint, component matching, overclocking); embedded systems.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Arquitetura de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_architecture.html#operating-systems",
+    "href": "1-computer_architecture.html#operating-systems",
+    "title": "4  Arquitetura de Computadores",
+    "section": "4.3 Operating Systems",
+    "text": "4.3 Operating Systems\nFocusing on Windows, my current OS.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Arquitetura de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_architecture.html#more-on-information-types",
+    "href": "1-computer_architecture.html#more-on-information-types",
+    "title": "4  Arquitetura de Computadores",
+    "section": "4.4 More on Information Types",
+    "text": "4.4 More on Information Types\nMore on how data can be stored, in different types",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Arquitetura de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_architecture.html#parallel-computing-and-other-topics",
+    "href": "1-computer_architecture.html#parallel-computing-and-other-topics",
+    "title": "4  Arquitetura de Computadores",
+    "section": "4.5 Parallel Computing And Other Topics",
+    "text": "4.5 Parallel Computing And Other Topics\nTopics that will be covered in practice in Julia.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Arquitetura de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "1-programming_software.html",
+    "href": "1-programming_software.html",
+    "title": "5  Programação e Engenharia de Software",
+    "section": "",
+    "text": "Disclaimer: em construção.\nConceitos gerais para construir uma base para entender linguagens de programação com uma visão geral.\nTópicos como teoria de compiladores, design, tipos de código. Type theory e paradigmas.\nAbaixo um pequeno excerto sobre tipos de código.\n\nMachine code: the binary code (instructions) that are the lowest level of comunication with the CPU (via the Kernel, obviously). Each OS will have its own machine code, as its dependent on the architecture an stuff.\nBytecode: an intermediate code, with hexadecimals and macro instructions (add, swap, etc.), that can’t be readed by a machine, and must be interpreted into machine code. But, it is flexible, and normally associated with code that can be run by any OS.\nCompiled languages are ones where a compiler translate the entire code directly into machine code, at compile-time. They can’t be ran interactively, as the only thing that can be run is the compiled machine code, but, are fast. Are associated with lower-level languages.\nInterpreted languages are ones where an interpreter pass the instructions to the machine for each block of code at run-time. Can be run interactively, but have an additional overhead. Are associated with higher-level languages, as can be more flexible with dynamic typing and such.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Programação e Engenharia de Software</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_systems.html",
+    "href": "1-computer_systems.html",
+    "title": "6  Sistemas de Computadores",
+    "section": "",
+    "text": "6.1 Básico de Sistemas\nDisclaimer: em construção.\nCapítulo sobre sistemas de computadores, tanto em termos de sistemas “pequenos” (distribuidos), quanto em termos da Web.\nConceitos teóricos e práticos de como computadores podem ser colocados em sistemas. Métodos de comunicação e protocolos.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Sistemas de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "1-computer_systems.html#web",
+    "href": "1-computer_systems.html#web",
+    "title": "6  Sistemas de Computadores",
+    "section": "6.2 Web",
+    "text": "6.2 Web\nExplicação em termos práticos, do ponto de vista de um desenvolvedor que tem que lidar com uma aplicação.\nListing All the agents/structures between my computer and the web:\n\nStart: my PC (meaning hardware + kernel + OS)\nMy browser (1. what is the relation to this and the term “client”)\nMy conection to the router (cable or net board 2. any other option?)\nMy router\nSeveral intermediates, such as my internet provider’s servers (3. talk about this step in more detail)\nEnd: the server (a computer that also stores data) where the site im interacting with is hosted\n\nConcepts such as IPs, DNS, ISP, URLs, TCP; server and client applications.",
+    "crumbs": [
+      "Ciência da Computação",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Sistemas de Computadores</span>"
+    ]
+  },
+  {
+    "objectID": "2-intro_low.html",
+    "href": "2-intro_low.html",
+    "title": "7  O Baixo Nível",
+    "section": "",
+    "text": "Disclaimer: em construção.\nEsta parte tem como objetivo explicar conceitos básicos de linguagens de baixo nível, mostrando tópicos que devem estar na atenção de um programador (gerenciamento de memória, erros, e segurança). Algumas linguagens serão explicadas rapidamente, mas não como realmente um curso sobre elas, mais para exemplificar conceitos, familiarização, e mostrar como utilizar essas linguagens como acessórias em outros projetos.",
+    "crumbs": [
+      "Baixo Nível",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>O Baixo Nível</span>"
+    ]
+  },
+  {
+    "objectID": "2-c_cpp.html",
+    "href": "2-c_cpp.html",
+    "title": "8  C e C++",
+    "section": "",
+    "text": "Disclaimer: em construção.\nComo dito, explicadas rapidamente, mas não como realmente um curso sobre elas, mais para exemplificar conceitos, familiarização, e mostrar como utilizar essas linguagens como acessórias em outros projetos.",
+    "crumbs": [
+      "Baixo Nível",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>C e C++</span>"
+    ]
+  },
+  {
+    "objectID": "2-go.html",
+    "href": "2-go.html",
+    "title": "9  Go",
+    "section": "",
+    "text": "Disclaimer: em construção.\nPor mais que tem menos controle sobre memória, Go é uma alternativa mais simples de se aprender, com alguns paradigmas que me atraem. Busco tê-la no futuro como a minha linguagem low level principal. Aqui apresentarei um mini-curso.",
+    "crumbs": [
+      "Baixo Nível",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Go</span>"
+    ]
+  },
+  {
+    "objectID": "3-intro_scripting.html",
+    "href": "3-intro_scripting.html",
+    "title": "10  Scripting",
+    "section": "",
+    "text": "Disclaimer: em construção.\nOverview de scrips e do ecossistema de linguagens de scripting. Falarei sobre R e Python, que tem seus livros próprios, até para contextualizar o estudo de Julia as seguir, o mais importante desta parte.\nJulia não receberá um livro próprio pois sua aplicação é menor no meu stack.",
+    "crumbs": [
+      "Scripting",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Scripting</span>"
+    ]
+  },
+  {
+    "objectID": "3-julia.html",
+    "href": "3-julia.html",
+    "title": "11  Julia: Performance e Ciência",
+    "section": "",
+    "text": "Disclaimer: em construção.\nCurso sobre Julia, focado em explciar seus conceitos principais (typing e multiple dispatch), técnicas de alta performance como paralelismo, e programação científica. Provavelmente precisarei de mais capítulos.",
+    "crumbs": [
+      "Scripting",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Julia: Performance e Ciência</span>"
+    ]
+  },
+  {
+    "objectID": "4-intro_webdev.html",
+    "href": "4-intro_webdev.html",
+    "title": "12  Desenvolvimento Web",
+    "section": "",
+    "text": "Disclaimer: em construção.\nEste capítulo relaciona os conceitos de sistemas de computadores e web, explicados na primeira parte, com como eles se encaixam no desenvolvimento web. Aqui será explicado o workflow e conceitos práticos gerais.",
+    "crumbs": [
+      "WebDev",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Desenvolvimento Web</span>"
+    ]
+  },
+  {
+    "objectID": "4-html_css.html",
+    "href": "4-html_css.html",
+    "title": "13  HTML e CSS",
+    "section": "",
+    "text": "Disclaimer: em construção.\nResumo, em termos práticos/aplicados, de HTML e CSS. Não tenho interesse em aplicações muito complexas, e gosto de evitar abstrações em um primeiro momento.",
+    "crumbs": [
+      "WebDev",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>HTML e CSS</span>"
+    ]
+  },
+  {
+    "objectID": "4-javascript.html",
+    "href": "4-javascript.html",
+    "title": "14  JavaScript",
+    "section": "",
+    "text": "Disclaimer: em construção.\nNão tenho muito interesse intelectual em JavaScript, mas é útil saber o básico para poder escrever funções específicas, e principalmente, saber entender códigos externos e debug.",
+    "crumbs": [
+      "WebDev",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>JavaScript</span>"
+    ]
+  },
+  {
+    "objectID": "4-frameworks.html",
+    "href": "4-frameworks.html",
+    "title": "15  Frameworks",
+    "section": "",
+    "text": "Disclaimer: em construção.\nNeste capítulo explicarei o que são frameworks web. Em algum momento escolherei um de meu interesse, e resumirei-o aqui. Considero algo com HTMX, jango-jinja, ou Svelte.",
+    "crumbs": [
+      "WebDev",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html",
+    "href": "5-databases.html",
+    "title": "16  Databases",
+    "section": "",
+    "text": "17 1. Databases in Theory\nDisclaimer: em construção.\nConceitos básicos sobre bancos de dados e SQL, e um pouquinho de no-SQL. Tutorial de SQLite e talvez PostgreSQL.\nAbaixo está um guia que fiz recentemente, que no futuro traduzirei.\nThis guide introduces databases, focusing on tabular SQL databases, and is for those with intermediate programming knowledge but no experience in the topic.\nDisclaimer: I don’t have formal education nor professional experience in databases. Much of what I explain here is based on the voices, and some definitions might be oversimplified.\nIndex:\nSections 1 and 2 are to get you out of the database illiteracy, and aren’t very applied. Section 3 start talking about more practical database concepts, and section 4 introduces SQL, with code examples and external materials.\nLets start by explaining some terms:",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#introduction",
+    "href": "5-databases.html#introduction",
+    "title": "16  Databases",
+    "section": "17.1 1.1 Introduction",
+    "text": "17.1 1.1 Introduction\nA database is a collection of data. Yes, very broad. There isn’t a better definition, but below I’ll describe better a specific case of databases.\nThere can be databases that “carry” tabular data, or not (ex: a database of .pdf files). Here, I’ll focus on tabular databases. These databases have their own programming language, SQL, and are called SQL-based databases.\nTo better quality what is a (tabular) database, it is useful to compare it to the simpler concept of a single data file (a .csv or .xlsx file, for example). While .csv or .xlsx carries tabular data, databases go beyond that:\n\nThe most important idea is that databases are a collection, they “carry” multiple “files”, and also information about their configuration and about how they are related (more on that later).\n\nIn the case of tabular databases, they “carry” multiple tables.\n\nBut, they also have lots of logistic characteristics:\n\nWhile one can manipulate .csv files in a programming language, databases are directly made to be programmatically manipulated, they even have their own programming language, SQL (more on that later).\nThey can be stored as a file .db, or as something more complex, that lives in a server.\nThey can be accessed by multiple users at the same time, and admins have way more security options to say who can access what.\nThey are built with efficiency in mind, making it faster to interact with (reading, searching, and writing).\n\n\nBecause of that, in basically any large project, a database will have organizational benefits over a maintaining a bunch of .csv files. They are used from e-commerce websites and social media platforms to enterprise applications and cloud-based systems.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#untangling-terms",
+    "href": "5-databases.html#untangling-terms",
+    "title": "16  Databases",
+    "section": "17.2 1.2 Untangling Terms",
+    "text": "17.2 1.2 Untangling Terms\nWe talked about some terms that can be present in a database “structured data”, “tabular data”, “relational data”, “SQL-based databases”. They have a lot of intersection and can be confusing. Lets untangle that.\n\nStructured data is “highly organized in a predefined format”.\n\nLots of data fit that description, including tabular data.\nBut, we can also have unstructured data, like a database of text, images, videos.\n\nTabular data is a specific type of structured data, organized in rows and columns.\n\nSQL is a language to interact with tabular databases, and tabular databases and SQL-based databases can be, most of the time, used interchangeably.\nThus, non-tabular databases are commonly called NoSQL databases. A database of text, images, videos will be NoSQL.\n\nA tabular database can contain multiple tables. Those tables can relate to each other. If they do, we have a relational database, else, we don’t.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#other-data-systems",
+    "href": "5-databases.html#other-data-systems",
+    "title": "16  Databases",
+    "section": "17.3 1.3 Other Data Systems",
+    "text": "17.3 1.3 Other Data Systems\nLastly, just to give a broader view, what are these other data systems that I’m not focusing here?\n\nAs said, we have NoSQL databases, that can carry structured but non-tabular data, or unstructured data.\n\nThere are different types of NoSQL databases, like document databases, graph databases, key-value stores, amongst others.\n\nThere are also similar concepts to databases, that are used when we have a variety and large sizes of data\n\nData Warehouses: specialized databases for analytics, optimized for complex queries on large datasets.\nData Lakes: a storage system for raw, unstructured data.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#existing-sql-based-databases",
+    "href": "5-databases.html#existing-sql-based-databases",
+    "title": "16  Databases",
+    "section": "18.1 2.1 Existing SQL-Based Databases",
+    "text": "18.1 2.1 Existing SQL-Based Databases\nIn the realm of SQL-based databases, we have a few popular softwares, like SQLite, MySQL, PostgreSQL, Microsoft SQL Server, and Oracle Database. They have different characteristics, but they all implement the concept of a database.\nA basic description fo each is below:\n\nSQLite: file-based, lightweight, ideal for small applications or testing.\nMySQL and PostgreSQL: server-based, widely used for web applications and small to medium-sized businesses.\nMicrosoft SQL Server and Oracle Database: enterprise-level databases with advanced features for large-scale applications.\n\nThere are some more technical differences, that are not that important for this introduction:\n\nThe most important is different data capabilities: some can only store traditional tabular data (SQLite), others (PostgreSQL) can store arrays, JSON objects, amongst others.\nEfficiency differences, some are better at reading, some are better at writing.\nDifferent security features.\n\nExtra: just to cite them, some common NoSQL databases are MongoDB, Cassandra, Redis, Couchbase, Neo4j, Amazon DynamoDB, amongst others.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#getting-the-software-and-creating-a-database",
+    "href": "5-databases.html#getting-the-software-and-creating-a-database",
+    "title": "16  Databases",
+    "section": "18.2 2.2 Getting the Software and Creating a Database",
+    "text": "18.2 2.2 Getting the Software and Creating a Database\nOkay, you probably had enough yap and want to jump straight at it. You need to:\n\nChoose a database software. For this introduction, we are going to use the simpler one, SQLite.\nDownload the software.\n\nSearch for the software’s website and download the installer. Else, use a tool like Chocolatey or Homebrew.\nNormally you install the software, and the interfaces (CLI and/or GUI).\n\nIn your project directory, interact with the software (via CLI or GUI), and create a database.\n\nTo “interact with the software”, you will need to learn SQL, so lets hold that for now.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#keys",
+    "href": "5-databases.html#keys",
+    "title": "16  Databases",
+    "section": "19.1 3.1 Keys",
+    "text": "19.1 3.1 Keys\nIn a database, we have several columns. Most of them carry variables, data associated with a row, a observation. But, to define what are the rows, that is, to identify each observation, we have the key columns. That is, keys are columns that uniquely identify each row in a table.\nYou will encounter the concept of primary and foreign keys:\n\nPrimary Key: a unique identifier for each record in a table. It ensures that each row can be uniquely identified, preventing duplicate entries. Typically, a primary key is a single column, like CustomerID, though it can also be a combination of columns.\nForeign Key: a field in one table that uniquely identifies a row in another table. This key creates a relationship between the tables, enforcing links between data (e.g., linking orders to specific customers). Foreign keys ensure data integrity by restricting values in one table to match entries in another table.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#column-configuration",
+    "href": "5-databases.html#column-configuration",
+    "title": "16  Databases",
+    "section": "19.2 3.2 Column Configuration",
+    "text": "19.2 3.2 Column Configuration\nWhen defining a table, we will describe each column. The description will include:\n\nColumn Name: The name of the column, like CustomerID or Name.\nData Type: The type of data the column can hold, like INTEGER, TEXT, DATE, etc.\nConstraints: rules applied to columns in a table to enforce data integrity, like “can’t be null”, “can’t have duplicates”, etc.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#relations",
+    "href": "5-databases.html#relations",
+    "title": "16  Databases",
+    "section": "19.3 3.3 Relations",
+    "text": "19.3 3.3 Relations\nIn a relational (tabular) database, relations link tables to represent meaningful connections between different data entities. These relationships reduce redundancy by storing related data in separate tables and linking them with keys.\nThere are three types of relations:\n\nOne-to-One (1:1): Each row in Table A links to only one row in Table B and vice versa.\nOne-to-Many (1:N): A single row in Table A links to multiple rows in Table B.\nMany-to-Many (M:N): Rows in Table A link to multiple rows in Table B and vice versa. This often requires a junction table to manage the links.\n\nAnd several benefits:\n\nData Integrity: Relationships enforce consistency, ensuring that each CustomerID in the Orders table has a corresponding entry in Customers (view example below).\nReduces Redundancy: Customer information (like Name) is stored once in the Customers table rather than being repeated in Orders. This reduces the size of the database (view example below).\nSimplifies Queries: By joining tables on related keys, you can easily retrieve combined information (e.g., all orders for a specific customer).\n\nLets work an example to make things more concrete.\n\n19.3.1 Example – One-to-Many Relationship:\nConsider a simple example with two tables: Customers and Orders. Each customer can place multiple orders, so this is a one-to-many relationship.\nTable 1 - Customers:\n\n\n\nCustomerID\nName\n\n\n\n\n1\nAlice\n\n\n2\nBob\n\n\n3\nCarol\n\n\n\nTable 2 - Orders:\n\n\n\nOrderID\nCustomerID\nOrderDate\nAmount\n\n\n\n\n101\n1\n2024-10-01\n50.00\n\n\n102\n1\n2024-10-05\n30.00\n\n\n103\n2\n2024-10-07\n75.00\n\n\n104\n3\n2024-10-08\n45.00\n\n\n\nThe CustomerID column in Orders refers to the CustomerID in Customers. This link is known as a foreign key, which creates a relationship between the two tables. Each Customer can have multiple Orders, but each Order belongs to only one Customer.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#external-materials",
+    "href": "5-databases.html#external-materials",
+    "title": "16  Databases",
+    "section": "19.4 3.4 External Materials",
+    "text": "19.4 3.4 External Materials\nThe material above is not enough, you must delve deeper on your own. From a quick search, I found some materials that seem to be good, but look for better ones on your own. Care to not read the SQL related parts without a previous understanding of SQL.\n\nKeys:\n\nmedium.\nmedium, again.\n\nColumn configuration:\n\nmygreatlearning.\nfeaturebase.\n\nRelations:\n\ndittofi.\nmetabase.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#other-important-constructs",
+    "href": "5-databases.html#other-important-constructs",
+    "title": "16  Databases",
+    "section": "19.5 3.5 Other Important Constructs",
+    "text": "19.5 3.5 Other Important Constructs\nNow, I’ll talk about other concepts that are not essencial to your understanding of how databases work, but is good to know that they exist. Please, do not give too much attention to this, as section 5. introduces SQL and is much more important.\n\n19.5.1 Database Indexing\nAn index is a special lookup table that the database uses to speed up data retrieval. An index on a column (or multiple columns) allows the database to locate rows more quickly without scanning the entire table. Think of it as a book’s index, where you can quickly find specific information by keyword or topic.\nWhen you create an index on a column, the database creates an internal structure that organizes data in a way that makes queries faster. Indexes are especially useful for columns frequently used in search conditions (WHERE clauses) and joins.\n\n\n19.5.2 Database Views\nA virtual table created by querying other tables. It does not store data itself but provides a way to simplify complex queries or restrict data access. Views can help present data in a specific way without altering the underlying tables.\n\n\n19.5.3 Stored Procedures\nPrecompiled SQL scripts saved in the database that can be executed as needed. Stored procedures help automate tasks, enforce business logic, and improve performance by reusing complex SQL.\n\n\n19.5.4 Triggers\nA set of instructions that automatically execute in response to specific database events, like insertions, updates, or deletions. Triggers are used to enforce data integrity and business rules.\n\n\n19.5.5 Data Integrity\nMaintaining and ensuring the accuracy, consistency, and reliability of data over its lifecycle. Databases enforce integrity to make sure that data remains accurate and meaningful. This can be done via programmed tests.\n\n\n19.5.6 Database Normalization\nThe process of structuring tables to minimize data redundancy and dependency. The goal is to organize data in a way that reduces duplication and simplifies data maintenance. I won’t delve into the technical details of what and how is done.\n\n\n19.5.7 Transactions\nA group of SQL operations executed as a single unit. If one operation fails, the entire transaction can be rolled back to maintain data consistency. Normally, they are planned following some principles, the ACID properties. I won’t delve into the technical details of what and how is done.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#core-sql-concepts-and-operations",
+    "href": "5-databases.html#core-sql-concepts-and-operations",
+    "title": "16  Databases",
+    "section": "20.1 4.1 Core SQL Concepts and Operations",
+    "text": "20.1 4.1 Core SQL Concepts and Operations\nBefore delving into the syntax, lets understand what are the possible operations. They can be categorized in three “boxes”:\n\nCreating Databases and Tables: Defining the structure of data storage.\n\nWhat are the columns names, types, and constraints going to be.\n\nQuerying: Retrieving specific data using SELECT statements and conditions.\n\nYou might have seen them in places like Python’s pandas.query() or R’s dplyr::filter().\n\nAltering and Managing Data: Updating, inserting, or deleting data and modifying table structures.\n\nLots of possible operations, adding/deleting/altering rows or columns, renaming columns, changing constraints, etc.\n\nJoining Tables: Combining data from multiple tables based on relationships.\n\nThere are different types of joins, and you might have seen them in places like Python’s pandas.merge() or R’s dplyr::left_join().\n\nAggregating Data: Summarizing data. Can be done in groups.\n\nYou might have seen them in places like R’s pandas.DataFrame.agg(), dplyr::summarize().",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#sql-syntax",
+    "href": "5-databases.html#sql-syntax",
+    "title": "16  Databases",
+    "section": "20.2 4.2 SQL Syntax",
+    "text": "20.2 4.2 SQL Syntax\nNow, lets dive into the actual syntax and commands. This will be very brief, and again, not enough, such that there is a “external materials” section at the end.\nIn SQL, commands are written as statements that describe actions you want to perform on the database. SQL is case-insensitive, though keywords are typically written in uppercase for readability.\n\n20.2.1 General SQL Syntax\n\nCommands: Each SQL command (like SELECT, INSERT, UPDATE) generally starts with a keyword indicating the action.\nClauses: Clauses (like WHERE, ORDER BY) define conditions or ordering within commands.\nSemicolon: Most SQL implementations end statements with a ;, marking the end of the command.\nComments: Use -- for single-line comments and /* ... */ for multi-line comments.\n\n\n\n20.2.2 Creating Databases and Tables\nCreating a database and defining a table with columns, data types, and constraints.\n-- Create a new database\nCREATE DATABASE MyDatabase;\n\n-- Select a database to work with\nUSE MyDatabase;\n\n-- Create a new table\nCREATE TABLE Customers (\n    CustomerID INT PRIMARY KEY,\n    Name VARCHAR(50) NOT NULL,\n    Email VARCHAR(100) UNIQUE\n);\n\n\n20.2.3 Querying\nRetrieving data using SELECT with conditions.\n-- Select all columns from a table\nSELECT * FROM Customers;\n\n-- Select specific columns with a condition\nSELECT Name, Email\nFROM Customers\nWHERE CustomerID = 1;\n\n-- Order results\nSELECT * FROM Customers\nORDER BY Name ASC;\n\n\n20.2.4 Altering and Managing Data\nInserting, updating, and deleting data, as well as modifying table structures.\n-- Insert new data into a table\nINSERT INTO Customers (CustomerID, Name, Email)\nVALUES (1, 'Alice', 'alice@example.com');\n\n-- Update data in a table\nUPDATE Customers\nSET Email = 'newalice@example.com'\nWHERE CustomerID = 1;\n\n-- Delete data from a table\nDELETE FROM Customers\nWHERE CustomerID = 1;\n\n-- Add a new column to an existing table\nALTER TABLE Customers\nADD Phone VARCHAR(15);\n\n-- Drop a column from a table\nALTER TABLE Customers\nDROP COLUMN Phone;\n\n\n20.2.5 Joining Tables\nCombining data from multiple tables based on a shared key.\n-- Example tables\nCREATE TABLE Orders (\n    OrderID INT PRIMARY KEY,\n    CustomerID INT,\n    Amount DECIMAL(10, 2),\n    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)\n);\n\n-- Join Customers and Orders tables to find all orders for each customer\nSELECT Customers.Name, Orders.OrderID, Orders.Amount\nFROM Customers\nJOIN Orders ON Customers.CustomerID = Orders.CustomerID;\n\n-- Left join to include customers with no orders\nSELECT Customers.Name, Orders.OrderID, Orders.Amount\nFROM Customers\nLEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;\n\n\n20.2.6 Aggregating Data\nSummarizing data with functions like COUNT, SUM, AVG, etc., often using GROUP BY.\n-- Count the number of customers\nSELECT COUNT(*) AS TotalCustomers\nFROM Customers;\n\n-- Calculate total order amount for each customer\nSELECT CustomerID, SUM(Amount) AS TotalSpent\nFROM Orders\nGROUP BY CustomerID;\n\n-- Find the average order amount\nSELECT AVG(Amount) AS AverageOrder\nFROM Orders;",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-databases.html#external-materials-1",
+    "href": "5-databases.html#external-materials-1",
+    "title": "16  Databases",
+    "section": "20.3 4.3 External Materials",
+    "text": "20.3 4.3 External Materials\nThe material above is not enough, you must delve deeper on your own. From a quick search, I found some materials that seem to be good, but look for better ones on your own.\n\n20.3.1 Tutorials\n\nw3schools. This one presents information via little snippets.\nsqltutorial. This one separates the content in “boxes”, similar to what I’ve done above.\nmode. A larger, lesson-based one.\ntutorialspoint.\n\nTo test the codes in these examples, you will need to setup a database. So its probably good to mess around with your own database first. For that, consider the section below.\n\n\n20.3.2 Examples (SQLite)\n\nguru99’s.\nTutorialBrain (Youtube video).\nProgrammingKnowledge (Youtube playlist).\n\nCare that they might be out of date.\n\n\n20.3.3 SQL Via Scripting Languages\nAs I said, one can connect to databases via packages from scripting languages, and run SQL commands. Here are some examples:\n\nPython: sqlite3 (database-specific), SQLAlchemy, and pandas has functions to connect with databases.\nR: DBI (basic conector to databases), RSQLite/RPostgres (database-specific), and dbplyr (a copy of the famous dplyr, that works with databases instead of dataframes).",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Databases</span>"
+    ]
+  },
+  {
+    "objectID": "5-good_practices.html",
+    "href": "5-good_practices.html",
+    "title": "17  Good Practices",
+    "section": "",
+    "text": "Disclaimer: em construção.\nConceitos gerais de boas práticas, tanto em termos de projetos e workflow, quando de código. Citarei guias especificos como tidyverse style guide e PEP-8.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Good Practices</span>"
+    ]
+  },
+  {
+    "objectID": "5-version_control.html",
+    "href": "5-version_control.html",
+    "title": "18  Version Control",
+    "section": "",
+    "text": "19 Introduction\nDisclaimer: em construção.\nNeste capítulo explicarei o que é controle de versão, e como usar o Git e GitHub.\nAbaixo um guia simplista que fiz a um tempo.\nReferência: https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control and https://www.youtube.com/watch?v=RGOj5yH7evk.\nWhat is “version control”, and why should you care? Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.\nGit’s history: the Linux development community (and in particular Linus Torvalds, the creator of Linux) developed their own tool based on some of the lessons they learned while using BitKeeper.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "5-version_control.html#gits-style",
+    "href": "5-version_control.html#gits-style",
+    "title": "18  Version Control",
+    "section": "19.1 Git’s Style",
+    "text": "19.1 Git’s Style\nGit saves versions of your files as snapshots:\n\n\n\nUntitled\n\n\nThere are three possible states of files:\n\nModified means that you have changed the file but have not committed it to your database yet.\nStaged means that you have marked a modified file in its current version to go into your next commit snapshot.\nCommitted means that the data is safely stored in your local database.\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nThe basic Git workflow goes something like this:\n\nYou modify files in your working tree.\nYou selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.\nYou do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.\nYou can sync your project in the cloud, with sites like Github. Then, there is a fourth step of pushing your changes to the cloud. Also, one can pull changes made in the cloud to your own machine.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "5-version_control.html#usage",
+    "href": "5-version_control.html#usage",
+    "title": "18  Version Control",
+    "section": "19.2 Usage",
+    "text": "19.2 Usage\nThere are a lot of different ways to use Git. There are the original command-line tools, and there are many graphical user interfaces of varying capabilities. For this book, we will be using Git on the command line. For one, the command line is the only place you can run all Git commands. Also if you know how to run the command-line version, you can probably also figure out how to run the GUI version, while the opposite is not necessarily true.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "5-version_control.html#installation-and-setup",
+    "href": "5-version_control.html#installation-and-setup",
+    "title": "18  Version Control",
+    "section": "19.3 Installation and Setup",
+    "text": "19.3 Installation and Setup\nInstall git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.\nNow, set your identity:\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nCreate a github account: https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration. Use the same email as above.\nGenerate a SSH public key and save it to your github account. Done!",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "5-version_control.html#basic-workflow",
+    "href": "5-version_control.html#basic-workflow",
+    "title": "18  Version Control",
+    "section": "20.1 Basic Workflow",
+    "text": "20.1 Basic Workflow\n\nFor creating a project from scratch:\n\nCreate a new folder for your project.\nIn the command line, set your WD to it cd C:/Users/&lt;user&gt;/.../my_project.\nInitialize git git init.\nCreate a new file. It is now only on the WD stage.\nStage it with git add &lt;filename&gt;.\nCommit it with git commit -m '&lt;your commit message&gt;'.\n\nYou can also get a project from the cloud (normally, from Github):\n\ngit clone &lt;url&gt;. This will copy all the files and the git data to your computer.\n\nNow, we can set a remote (a sync reference in the cloud):\n\nIf you cloned a repo from the cloud, that repo is already set as the remote.\nIf you created from scratch:\n\nYou can get the https url to sync your project with a remote, in the green “code” button at a Github repo.\nThen do git remote add origin &lt;url&gt;. Origin is the standard keyword that is being given to that remote.\n\n\nNow, we can interact with the remote:\n\nYou can push your committed changes with git push origin main. We referenced which remote we want to push to (origin).\nYou can pull changes from a remote with git pull.\n\n\nObs: main stands for the ”branch”, something we haven’t talked about yet, but is often called main or master.\nKeep in your mind that you can use the following commands to ask for help:\ngit help &lt;verb&gt;\ngit &lt;verb&gt; --help\nman git-&lt;verb&gt;\nOther tasks:\n\nYou can see the status of your files with git status.\nYou can see the log of commits with git log.\nYou can unmodify a file with git restore &lt;filename&gt;.\nYou can unstage a file with git restore --staged &lt;filename&gt;.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Version Control</span>"
+    ]
+  },
+  {
+    "objectID": "5-version_control.html#git-branching",
+    "href": "5-version_control.html#git-branching",
+    "title": "18  Version Control",
+    "section": "20.2 Git Branching",
+    "text": "20.2 Git Branching\nBranching means you diverge from the main line of development and continue to do work without messing with that main line.\n\n\n\nUntitled\n\n\nI wont delve into details about how to interact with branches.",
+    "crumbs": [
+      "Outros Tópicos",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Version Control</span>"
     ]
   }
 ]

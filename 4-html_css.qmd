@@ -1,1 +1,5 @@
 # HTML e CSS
+
+**Disclaimer:** em construção.
+
+Resumo, em termos práticos/aplicados, de HTML e CSS. Não tenho interesse em aplicações muito complexas, e gosto de evitar abstrações em um primeiro momento.

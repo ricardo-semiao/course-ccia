@@ -1,1 +1,5 @@
 # Go
+
+**Disclaimer:** em construção.
+
+Por mais que tem menos controle sobre memória, Go é uma alternativa mais simples de se aprender, com alguns paradigmas que me atraem. Busco tê-la no futuro como a minha linguagem low level principal. Aqui apresentarei um mini-curso.

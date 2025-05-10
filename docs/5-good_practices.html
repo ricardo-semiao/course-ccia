@@ -152,13 +152,13 @@
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bem Vindo!</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ciência da Computação: Introdução e Aplicações</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -172,13 +172,7 @@
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-intro_cs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-theoretical_cs.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-overview_theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoria da Computação</span></span></a>
   </div>
 </li>
@@ -249,7 +243,7 @@
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3-julia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></span></a>
   </div>
 </li>
       </ul>
@@ -337,6 +331,8 @@
         <header id="title-block-header">
             
         </header>
+<p><strong>Disclaimer:</strong> em construção.</p>
+<p>Conceitos gerais de boas práticas, tanto em termos de projetos e workflow, quando de código. Citarei guias especificos como tidyverse style guide e PEP-8.</p>
 
 
 </main> <!-- /main -->
@@ -430,7 +426,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ricardo-semiao\.github\.io\/course-ccia\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

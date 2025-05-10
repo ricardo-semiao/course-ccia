@@ -1,1 +1,5 @@
 # C e C++
+
+**Disclaimer:** em construção.
+
+Como dito, explicadas rapidamente, mas não como realmente um curso sobre elas, mais para exemplificar conceitos, familiarização, e mostrar como utilizar essas linguagens como acessórias em outros projetos.

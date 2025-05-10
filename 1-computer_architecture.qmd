@@ -1,1 +1,117 @@
 # Arquitetura de Computadores
+
+**Disclaimer:** em construção.
+
+O objetivo deste capítulo é consolidar os conceitos do capítulo anterior em termos práticos. Como, na prática, conseguimos sair de um fio de energia para uma linguagem de programação?
+
+Escrevi o plano abaixo originalmente em inglês, mas irei traduzi-lo.
+
+---
+
+## Basics of Information and Computer Architeture
+
+- What is it: From a wire of energy, how can we get information? by controling its flow, yielding binary sequences.
+- How it is transported: What is needed for that: control flow hardware (briefly explain how semiconductors work, and diodes, transistors, capacitors, etc.); clocks, to cont the sequences (briefly explain how they work).
+    - Topics that must be cited: voltage tresholds and truncation; How capacitors relate to logic gates (useful for the next sections); clock frequency and dynamic clocking; clock distribution, edge triggering; multiple clock sync
+- How it is stored: To perform AND(true, true), we need to remember the AND, the true, and the true, that is, we need memory. Briefly explain how capacitor and flip-flop memory works. Without getting into much detail, contextualize that we have registers, cache, ram, and long-term memory, ROM, all with the same word scheme.
+    - Topics that must be cited: combinational and sequential logic (via flip flops); volatile and fixed memory; row and column addressing and reading; memory addresses; MMU
+- How is it interpreted: we need to be able to interpret 0/1 into a more comprehensive format, this is a linguistics task! bits, bytes, and words. briefly contextualize the different widths of words. talk about how we create a dictionary of how to separate words, and sets of operations, values, etc; that is, explain ISA (examples of 32bit). Explain machine code, and its abstraction assembly, explain it talking about it like a language
+    - Topics that must be covered: opcode, and the various different “modes” of acessing values (constant, registers, memory adresses, memory addr in registers, bigger-than-word values); how each operation-mode defines how the word is interpreted
+- How is it operated: ALU and memory operations, logic gates and how they are phgisically implemented, combining simple to get complex operations
+- How is it orchestrated: clock cycles; types of registers (PC); reading from outer memory onto registers first; CU: reading and decoding instructions, sending control signals (explain as it opening gates to direct the read-from-memory-words)
+
+Missing: linguistics, and buses.
+
+
+## Macro Computer Architecture
+
+List of all the computer components, in order of activation.
+
+**Step 1: Power Supply Activation**
+
+1. **Power Source (PSU):**  
+   - When the computer is connected to a power source and the power button is pressed, the **Power Supply Unit (PSU)** converts AC (alternating current) from the wall outlet into DC (direct current) at various voltage levels (e.g., +12V, +5V, +3.3V).
+   - The PSU sends a small amount of power (called **standby power**, or +5VSB) to the motherboard to power essential circuits, such as the **power button** logic.
+
+2. **Power Good Signal:**  
+   - Once the PSU determines that all voltage rails are stable, it sends a **Power Good Signal** (PG) to the motherboard, indicating that power is ready for distribution.
+
+**Step 2: Motherboard and Chipset Initialization**
+
+3. **Chipset Wake-Up:**  
+   - The motherboard chipset (including embedded controllers and voltage regulators) receives power. These manage distribution to other components on the motherboard.
+   - Voltage regulators ensure that every component (CPU, GPU, RAM, etc.) receives the correct voltage and current.
+
+4. **Clock Signal Activation:**  
+   - The system clock starts generating a stable square wave signal, synchronizing timing for all components.
+
+**Step 3: CPU Initialization**
+
+5. **CPU Power-Up:**  
+   - The CPU is powered on and begins its first operation. It starts fetching instructions from a predefined memory location, typically set to the **BIOS/UEFI firmware** address.
+
+6. **Reset Vector Fetch:**  
+   - The CPU looks at the reset vector, a specific memory address that points to the start of the **BIOS/UEFI firmware** program.
+
+**Step 4: BIOS/UEFI Execution**
+
+7. **Firmware Execution:**  
+   - The CPU starts executing the BIOS/UEFI firmware stored in non-volatile flash memory on the motherboard. The firmware is responsible for initializing the hardware and preparing the system to boot an operating system.
+
+8. **POST (Power-On Self-Test):**  
+   - The BIOS/UEFI performs a series of hardware checks, called the **Power-On Self-Test (POST)**. Key components checked include:
+     - **CPU:** Verified for basic functionality.
+     - **RAM:** A memory test is performed to ensure that memory modules are functional and accessible.
+     - **GPU:** The graphics card is initialized, and a basic video signal is sent to the monitor.
+     - **Storage Devices:** The BIOS/UEFI checks for the presence of storage devices (e.g., HDDs, SSDs).
+     - **Peripherals:** Key peripherals like keyboards, mice, and USB devices are checked.
+
+9. **Peripheral Initialization:**  
+   - The chipset initializes I/O controllers, such as:
+     - USB controllers for attached peripherals.
+     - Network interfaces (e.g., Ethernet or Wi-Fi).
+     - Audio controllers and other onboard devices.
+
+10. **System Configuration:**  
+    - The BIOS/UEFI reads configuration data (e.g., boot order, hardware settings) stored in CMOS memory or NVRAM (Non-Volatile RAM).
+
+**Step 5: Bootloader and OS Handoff**
+
+11. **Boot Device Selection:**  
+    - The BIOS/UEFI determines the boot device (e.g., SSD, HDD, USB, or network) based on the boot order configured.
+
+12. **Bootloader Execution:**  
+    - The BIOS/UEFI loads the bootloader (e.g., GRUB for Linux, Boot Manager for Windows) from the boot sector of the selected boot device into RAM.
+    - The CPU begins executing the bootloader.
+
+13. **OS Kernel Loading:**  
+    - The bootloader loads the operating system kernel into memory, and the kernel initializes system-level hardware drivers.
+
+**Step 6: Hardware and Software Handshaking**
+
+14. **Device Driver Initialization:**  
+    - Once the OS takes over, it loads device drivers for various hardware components:
+      - CPU cores and threads (scheduler initialization).
+      - GPU and VRAM for graphical interfaces.
+      - Network interfaces for connectivity.
+      - Storage drivers for managing HDD/SSD access.
+
+15. **System Resources Allocation:**  
+    - The operating system assigns memory addresses and I/O ports to hardware devices for communication.
+
+Missing: where each firmware lives, and what exactly are they; more on hard drives (partitions, file systems); more on components (from a pc builder standpoint, component matching, overclocking); embedded systems.
+
+
+## Operating Systems
+
+Focusing on Windows, my current OS.
+
+
+## More on Information Types
+
+More on how data can be stored, in different types
+
+
+## Parallel Computing And Other Topics
+
+Topics that will be covered in practice in Julia.

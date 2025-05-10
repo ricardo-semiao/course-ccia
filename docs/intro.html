@@ -7,7 +7,7 @@
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./1-intro_cs.html" rel="next">
+<link href="./1-overview_theory.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -23,7 +23,7 @@
     <link href="/site_assets/img/icon.png" rel="icon" type="image/png">
     <link href="/site_assets/img/icon.png" rel="shortcut icon" type="image/png">
 
-    <title>Ciência da Computação: Introdução e Aplicações – 1&nbsp; Introdução</title>
+    <title>Ciência da Computação: Introdução e Aplicações – 2&nbsp; Introdução</title>
     <style>
         code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -124,7 +124,7 @@
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -152,13 +152,13 @@
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bem Vindo!</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ciência da Computação: Introdução e Aplicações</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -172,13 +172,7 @@
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-intro_cs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-theoretical_cs.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-overview_theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoria da Computação</span></span></a>
   </div>
 </li>
@@ -249,7 +243,7 @@
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3-julia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></span></a>
   </div>
 </li>
       </ul>
@@ -333,60 +327,65 @@
         <nav id="TOC" role="doc-toc" class="toc-active">
             <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#parte-1-ciência-da-computação" id="toc-parte-1-ciência-da-computação" class="nav-link active" data-scroll-target="#parte-1-ciência-da-computação"><span class="header-section-number">1.1</span> Parte 1: Ciência da Computação</a></li>
-<li><a href="#parte-2-linguagens-low-level" id="toc-parte-2-linguagens-low-level" class="nav-link" data-scroll-target="#parte-2-linguagens-low-level"><span class="header-section-number">1.2</span> Parte 2: Linguagens <em>Low-Level</em></a></li>
-<li><a href="#parte-3-linguagens-de-scripting" id="toc-parte-3-linguagens-de-scripting" class="nav-link" data-scroll-target="#parte-3-linguagens-de-scripting"><span class="header-section-number">1.3</span> Parte 3: Linguagens de <em>Scripting</em></a></li>
-<li><a href="#parte-4-linguagens-de-web-dev" id="toc-parte-4-linguagens-de-web-dev" class="nav-link" data-scroll-target="#parte-4-linguagens-de-web-dev"><span class="header-section-number">1.4</span> Parte 4: Linguagens de <em>Web Dev</em></a></li>
-<li><a href="#parte-5-outros-temas" id="toc-parte-5-outros-temas" class="nav-link" data-scroll-target="#parte-5-outros-temas"><span class="header-section-number">1.5</span> Parte 5: Outros Temas</a></li>
+<li><a href="#parte-1-ciência-da-computação" id="toc-parte-1-ciência-da-computação" class="nav-link active" data-scroll-target="#parte-1-ciência-da-computação"><span class="header-section-number">2.1</span> Parte 1: Ciência da Computação</a></li>
+<li><a href="#parte-2-linguagens-low-level" id="toc-parte-2-linguagens-low-level" class="nav-link" data-scroll-target="#parte-2-linguagens-low-level"><span class="header-section-number">2.2</span> Parte 2: Linguagens <em>Low-Level</em></a></li>
+<li><a href="#parte-3-linguagens-de-scripting" id="toc-parte-3-linguagens-de-scripting" class="nav-link" data-scroll-target="#parte-3-linguagens-de-scripting"><span class="header-section-number">2.3</span> Parte 3: Linguagens de <em>Scripting</em></a></li>
+<li><a href="#parte-4-linguagens-de-web-dev" id="toc-parte-4-linguagens-de-web-dev" class="nav-link" data-scroll-target="#parte-4-linguagens-de-web-dev"><span class="header-section-number">2.4</span> Parte 4: Linguagens de <em>Web Dev</em></a></li>
+<li><a href="#parte-5-outros-temas" id="toc-parte-5-outros-temas" class="nav-link" data-scroll-target="#parte-5-outros-temas"><span class="header-section-number">2.5</span> Parte 5: Outros Temas</a></li>
 </ul>
         </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></h1></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></h1></header>
         <header id="title-block-header">
             
         </header>
         
 <p>A organização deste livro é descrita abaixo.</p>
-<section id="parte-1-ciência-da-computação" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="parte-1-ciência-da-computação"><span class="header-section-number">1.1</span> Parte 1: Ciência da Computação</h2>
+<section id="parte-1-ciência-da-computação" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="parte-1-ciência-da-computação"><span class="header-section-number">2.1</span> Parte 1: Ciência da Computação</h2>
 <p>Aqui são apresentados os temas básicos da ciência da computação como um todo. Os capítulos são descritos abaixo:</p>
 <ul>
-<li>Teoria da Computação: <strong>em construção</strong>.</li>
-<li>Arquitetura de Computadores: <strong>em construção</strong>.</li>
-<li>Programação e Engenharia de Software: <strong>em construção</strong>.</li>
-<li>Sistemas de Computadores: <strong>em construção</strong>.</li>
+<li>Teoria da Computação: Introdução aos conceitos fundamentais da teoria da computação.</li>
+<li>Arquitetura de Computadores: Consolidação prática de conceitos de arquitetura computacional.</li>
+<li>Programação e Engenharia de Software: Conceitos gerais para construir uma base em linguagens de programação.</li>
+<li>Sistemas de Computadores: Conceitos teóricos e práticos sobre sistemas computacionais e comunicação.</li>
 </ul>
 </section>
-<section id="parte-2-linguagens-low-level" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="parte-2-linguagens-low-level"><span class="header-section-number">1.2</span> Parte 2: Linguagens <em>Low-Level</em></h2>
+<section id="parte-2-linguagens-low-level" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="parte-2-linguagens-low-level"><span class="header-section-number">2.2</span> Parte 2: Linguagens <em>Low-Level</em></h2>
 <p>Aqui são apresentados conceitos básicos de linguagens de baixo nível. Os capítulos são descritos abaixo:</p>
 <ul>
-<li>O Baixo Nível: <strong>em construção</strong>.</li>
-<li>C e C++: <strong>em construção</strong>.</li>
-<li>Go: <strong>em construção</strong>.</li>
+<li>O Baixo Nível: Explicação de conceitos básicos de linguagens de baixo nível.</li>
+<li>C e C++: Exemplificação de conceitos e familiarização com C e C++.</li>
+<li>Go: Introdução ao Go como alternativa simples e eficiente para programação de baixo nível.</li>
 </ul>
 </section>
-<section id="parte-3-linguagens-de-scripting" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="parte-3-linguagens-de-scripting"><span class="header-section-number">1.3</span> Parte 3: Linguagens de <em>Scripting</em></h2>
+<section id="parte-3-linguagens-de-scripting" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="parte-3-linguagens-de-scripting"><span class="header-section-number">2.3</span> Parte 3: Linguagens de <em>Scripting</em></h2>
 <p>Aqui são apresentados conceitos básicos de linguagens de scripting. Os capítulos são descritos abaixo:</p>
 <ul>
-<li>Scripting: <strong>em construção</strong>.</li>
-<li>Julia: <strong>em construção</strong>.</li>
+<li>Scripting: Introdução geral a linguagens de scripting.</li>
+<li>Julia: Curso focado em alta performance e programação científica com Julia.</li>
 </ul>
 </section>
-<section id="parte-4-linguagens-de-web-dev" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="parte-4-linguagens-de-web-dev"><span class="header-section-number">1.4</span> Parte 4: Linguagens de <em>Web Dev</em></h2>
+<section id="parte-4-linguagens-de-web-dev" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="parte-4-linguagens-de-web-dev"><span class="header-section-number">2.4</span> Parte 4: Linguagens de <em>Web Dev</em></h2>
 <p>Aqui são apresentados conceitos básicos de linguagens de web dev. Os capítulos são descritos abaixo:</p>
 <ul>
-<li>HTML/CSS: <strong>em construção</strong>.</li>
-<li>JavaScript: <strong>em construção</strong>.</li>
-<li>Frameworks WebDev: <strong>em construção</strong>.</li>
+<li>HTML/CSS: Resumo prático e aplicado de HTML e CSS.</li>
+<li>JavaScript: Introdução básica para entender e depurar códigos em JavaScript.</li>
+<li>Frameworks WebDev: Explicação sobre frameworks web e escolha de um para estudo.</li>
 </ul>
 </section>
-<section id="parte-5-outros-temas" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="parte-5-outros-temas"><span class="header-section-number">1.5</span> Parte 5: Outros Temas</h2>
+<section id="parte-5-outros-temas" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="parte-5-outros-temas"><span class="header-section-number">2.5</span> Parte 5: Outros Temas</h2>
 <p>Aqui são apresentados outros conceitos relevantes, como Git/GitHub e databases.</p>
+<ul>
+<li>Version Control: Explicação sobre controle de versão e uso de Git e GitHub.</li>
+<li>Databases: Conceitos básicos sobre bancos de dados e SQL, com tutorial de SQLite.</li>
+<li>Good Practices: Conceitos gerais de boas práticas em projetos e código.</li>
+</ul>
 
 
 </section>
@@ -481,7 +480,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ricardo-semiao\.github\.io\/course-ccia\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -810,13 +809,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Bem Vindo!">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bem Vindo!</span>
+      <a href="./index.html" class="pagination-link" aria-label="Ciência da Computação: Introdução e Aplicações">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ciência da Computação: Introdução e Aplicações</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1-intro_cs.html" class="pagination-link" aria-label="Overview">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./1-overview_theory.html" class="pagination-link" aria-label="Teoria da Computação">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoria da Computação</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

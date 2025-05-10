@@ -1,1 +1,5 @@
 # Good Practices
+
+**Disclaimer:** em construção.
+
+Conceitos gerais de boas práticas, tanto em termos de projetos e workflow, quando de código. Citarei guias especificos como tidyverse style guide e PEP-8.

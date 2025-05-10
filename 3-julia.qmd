@@ -1,1 +1,5 @@
-# Julia
+# Julia: Performance e Ciência
+
+**Disclaimer:** em construção.
+
+Curso sobre Julia, focado em explciar seus conceitos principais (typing e multiple dispatch),  técnicas de alta performance como paralelismo, e programação científica. Provavelmente precisarei de mais capítulos.

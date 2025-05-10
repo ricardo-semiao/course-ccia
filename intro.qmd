@@ -2,43 +2,42 @@
 
 A organização deste livro é descrita abaixo.
 
-
 ## Parte 1: Ciência da Computação
 
 Aqui são apresentados os temas básicos da ciência da computação como um todo. Os capítulos são descritos abaixo:
 
-- Teoria da Computação: **em construção**.
-- Arquitetura de Computadores: **em construção**.
-- Programação e Engenharia de Software: **em construção**.
-- Sistemas de Computadores: **em construção**.
-
+- Teoria da Computação: Introdução aos conceitos fundamentais da teoria da computação.
+- Arquitetura de Computadores: Consolidação prática de conceitos de arquitetura computacional.
+- Programação e Engenharia de Software: Conceitos gerais para construir uma base em linguagens de programação.
+- Sistemas de Computadores: Conceitos teóricos e práticos sobre sistemas computacionais e comunicação.
 
 ## Parte 2: Linguagens _Low-Level_
 
 Aqui são apresentados conceitos básicos de linguagens de baixo nível. Os capítulos são descritos abaixo:
 
-- O Baixo Nível: **em construção**.
-- C e C++: **em construção**.
-- Go: **em construção**.
-
+- O Baixo Nível: Explicação de conceitos básicos de linguagens de baixo nível.
+- C e C++: Exemplificação de conceitos e familiarização com C e C++.
+- Go: Introdução ao Go como alternativa simples e eficiente para programação de baixo nível.
 
 ## Parte 3: Linguagens de _Scripting_
 
 Aqui são apresentados conceitos básicos de linguagens de scripting. Os capítulos são descritos abaixo:
 
-- Scripting: **em construção**.
-- Julia: **em construção**.
-
+- Scripting: Introdução geral a linguagens de scripting.
+- Julia: Curso focado em alta performance e programação científica com Julia.
 
 ## Parte 4: Linguagens de _Web Dev_
 
 Aqui são apresentados conceitos básicos de linguagens de web dev. Os capítulos são descritos abaixo:
 
-- HTML/CSS: **em construção**.
-- JavaScript: **em construção**.
-- Frameworks WebDev: **em construção**.
-
+- HTML/CSS: Resumo prático e aplicado de HTML e CSS.
+- JavaScript: Introdução básica para entender e depurar códigos em JavaScript.
+- Frameworks WebDev: Explicação sobre frameworks web e escolha de um para estudo.
 
 ## Parte 5: Outros Temas
 
 Aqui são apresentados outros conceitos relevantes, como Git/GitHub e databases.
+
+- Version Control: Explicação sobre controle de versão e uso de Git e GitHub.
+- Databases: Conceitos básicos sobre bancos de dados e SQL, com tutorial de SQLite.
+- Good Practices: Conceitos gerais de boas práticas em projetos e código.

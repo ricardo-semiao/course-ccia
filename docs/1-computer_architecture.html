@@ -8,7 +8,7 @@
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./1-programming_software.html" rel="next">
-<link href="./1-theoretical_cs.html" rel="prev">
+<link href="./1-overview_theory.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -124,7 +124,7 @@
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-intro_cs.html">Ciência da Computação</a></li><li class="breadcrumb-item"><a href="./1-computer_architecture.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Arquitetura de Computadores</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-overview_theory.html">Ciência da Computação</a></li><li class="breadcrumb-item"><a href="./1-computer_architecture.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Arquitetura de Computadores</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -152,13 +152,13 @@
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bem Vindo!</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ciência da Computação: Introdução e Aplicações</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -172,13 +172,7 @@
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-intro_cs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-theoretical_cs.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-overview_theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoria da Computação</span></span></a>
   </div>
 </li>
@@ -249,7 +243,7 @@
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3-julia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></span></a>
   </div>
 </li>
       </ul>
@@ -329,16 +323,167 @@
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+            <h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#basics-of-information-and-computer-architeture" id="toc-basics-of-information-and-computer-architeture" class="nav-link active" data-scroll-target="#basics-of-information-and-computer-architeture"><span class="header-section-number">4.1</span> Basics of Information and Computer Architeture</a></li>
+<li><a href="#macro-computer-architecture" id="toc-macro-computer-architecture" class="nav-link" data-scroll-target="#macro-computer-architecture"><span class="header-section-number">4.2</span> Macro Computer Architecture</a></li>
+<li><a href="#operating-systems" id="toc-operating-systems" class="nav-link" data-scroll-target="#operating-systems"><span class="header-section-number">4.3</span> Operating Systems</a></li>
+<li><a href="#more-on-information-types" id="toc-more-on-information-types" class="nav-link" data-scroll-target="#more-on-information-types"><span class="header-section-number">4.4</span> More on Information Types</a></li>
+<li><a href="#parallel-computing-and-other-topics" id="toc-parallel-computing-and-other-topics" class="nav-link" data-scroll-target="#parallel-computing-and-other-topics"><span class="header-section-number">4.5</span> Parallel Computing And Other Topics</a></li>
+</ul>
+        </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-intro_cs.html">Ciência da Computação</a></li><li class="breadcrumb-item"><a href="./1-computer_architecture.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Arquitetura de Computadores</span></a></li></ol></nav><h1 class="title display-7"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Arquitetura de Computadores</span></h1></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-overview_theory.html">Ciência da Computação</a></li><li class="breadcrumb-item"><a href="./1-computer_architecture.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Arquitetura de Computadores</span></a></li></ol></nav><h1 class="title display-7"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Arquitetura de Computadores</span></h1></header>
         <header id="title-block-header">
             
         </header>
+        
+<p><strong>Disclaimer:</strong> em construção.</p>
+<p>O objetivo deste capítulo é consolidar os conceitos do capítulo anterior em termos práticos. Como, na prática, conseguimos sair de um fio de energia para uma linguagem de programação?</p>
+<p>Escrevi o plano abaixo originalmente em inglês, mas irei traduzi-lo.</p>
+<hr>
+<section id="basics-of-information-and-computer-architeture" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="basics-of-information-and-computer-architeture"><span class="header-section-number">4.1</span> Basics of Information and Computer Architeture</h2>
+<ul>
+<li>What is it: From a wire of energy, how can we get information? by controling its flow, yielding binary sequences.</li>
+<li>How it is transported: What is needed for that: control flow hardware (briefly explain how semiconductors work, and diodes, transistors, capacitors, etc.); clocks, to cont the sequences (briefly explain how they work).
+<ul>
+<li>Topics that must be cited: voltage tresholds and truncation; How capacitors relate to logic gates (useful for the next sections); clock frequency and dynamic clocking; clock distribution, edge triggering; multiple clock sync</li>
+</ul></li>
+<li>How it is stored: To perform AND(true, true), we need to remember the AND, the true, and the true, that is, we need memory. Briefly explain how capacitor and flip-flop memory works. Without getting into much detail, contextualize that we have registers, cache, ram, and long-term memory, ROM, all with the same word scheme.
+<ul>
+<li>Topics that must be cited: combinational and sequential logic (via flip flops); volatile and fixed memory; row and column addressing and reading; memory addresses; MMU</li>
+</ul></li>
+<li>How is it interpreted: we need to be able to interpret 0/1 into a more comprehensive format, this is a linguistics task! bits, bytes, and words. briefly contextualize the different widths of words. talk about how we create a dictionary of how to separate words, and sets of operations, values, etc; that is, explain ISA (examples of 32bit). Explain machine code, and its abstraction assembly, explain it talking about it like a language
+<ul>
+<li>Topics that must be covered: opcode, and the various different “modes” of acessing values (constant, registers, memory adresses, memory addr in registers, bigger-than-word values); how each operation-mode defines how the word is interpreted</li>
+</ul></li>
+<li>How is it operated: ALU and memory operations, logic gates and how they are phgisically implemented, combining simple to get complex operations</li>
+<li>How is it orchestrated: clock cycles; types of registers (PC); reading from outer memory onto registers first; CU: reading and decoding instructions, sending control signals (explain as it opening gates to direct the read-from-memory-words)</li>
+</ul>
+<p>Missing: linguistics, and buses.</p>
+</section>
+<section id="macro-computer-architecture" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="macro-computer-architecture"><span class="header-section-number">4.2</span> Macro Computer Architecture</h2>
+<p>List of all the computer components, in order of activation.</p>
+<p><strong>Step 1: Power Supply Activation</strong></p>
+<ol type="1">
+<li><strong>Power Source (PSU):</strong>
+<ul>
+<li>When the computer is connected to a power source and the power button is pressed, the <strong>Power Supply Unit (PSU)</strong> converts AC (alternating current) from the wall outlet into DC (direct current) at various voltage levels (e.g., +12V, +5V, +3.3V).</li>
+<li>The PSU sends a small amount of power (called <strong>standby power</strong>, or +5VSB) to the motherboard to power essential circuits, such as the <strong>power button</strong> logic.</li>
+</ul></li>
+<li><strong>Power Good Signal:</strong>
+<ul>
+<li>Once the PSU determines that all voltage rails are stable, it sends a <strong>Power Good Signal</strong> (PG) to the motherboard, indicating that power is ready for distribution.</li>
+</ul></li>
+</ol>
+<p><strong>Step 2: Motherboard and Chipset Initialization</strong></p>
+<ol start="3" type="1">
+<li><strong>Chipset Wake-Up:</strong>
+<ul>
+<li>The motherboard chipset (including embedded controllers and voltage regulators) receives power. These manage distribution to other components on the motherboard.</li>
+<li>Voltage regulators ensure that every component (CPU, GPU, RAM, etc.) receives the correct voltage and current.</li>
+</ul></li>
+<li><strong>Clock Signal Activation:</strong>
+<ul>
+<li>The system clock starts generating a stable square wave signal, synchronizing timing for all components.</li>
+</ul></li>
+</ol>
+<p><strong>Step 3: CPU Initialization</strong></p>
+<ol start="5" type="1">
+<li><strong>CPU Power-Up:</strong>
+<ul>
+<li>The CPU is powered on and begins its first operation. It starts fetching instructions from a predefined memory location, typically set to the <strong>BIOS/UEFI firmware</strong> address.</li>
+</ul></li>
+<li><strong>Reset Vector Fetch:</strong>
+<ul>
+<li>The CPU looks at the reset vector, a specific memory address that points to the start of the <strong>BIOS/UEFI firmware</strong> program.</li>
+</ul></li>
+</ol>
+<p><strong>Step 4: BIOS/UEFI Execution</strong></p>
+<ol start="7" type="1">
+<li><strong>Firmware Execution:</strong>
+<ul>
+<li>The CPU starts executing the BIOS/UEFI firmware stored in non-volatile flash memory on the motherboard. The firmware is responsible for initializing the hardware and preparing the system to boot an operating system.</li>
+</ul></li>
+<li><strong>POST (Power-On Self-Test):</strong>
+<ul>
+<li>The BIOS/UEFI performs a series of hardware checks, called the <strong>Power-On Self-Test (POST)</strong>. Key components checked include:
+<ul>
+<li><strong>CPU:</strong> Verified for basic functionality.</li>
+<li><strong>RAM:</strong> A memory test is performed to ensure that memory modules are functional and accessible.</li>
+<li><strong>GPU:</strong> The graphics card is initialized, and a basic video signal is sent to the monitor.</li>
+<li><strong>Storage Devices:</strong> The BIOS/UEFI checks for the presence of storage devices (e.g., HDDs, SSDs).</li>
+<li><strong>Peripherals:</strong> Key peripherals like keyboards, mice, and USB devices are checked.</li>
+</ul></li>
+</ul></li>
+<li><strong>Peripheral Initialization:</strong>
+<ul>
+<li>The chipset initializes I/O controllers, such as:
+<ul>
+<li>USB controllers for attached peripherals.</li>
+<li>Network interfaces (e.g., Ethernet or Wi-Fi).</li>
+<li>Audio controllers and other onboard devices.</li>
+</ul></li>
+</ul></li>
+<li><strong>System Configuration:</strong>
+<ul>
+<li>The BIOS/UEFI reads configuration data (e.g., boot order, hardware settings) stored in CMOS memory or NVRAM (Non-Volatile RAM).</li>
+</ul></li>
+</ol>
+<p><strong>Step 5: Bootloader and OS Handoff</strong></p>
+<ol start="11" type="1">
+<li><strong>Boot Device Selection:</strong>
+<ul>
+<li>The BIOS/UEFI determines the boot device (e.g., SSD, HDD, USB, or network) based on the boot order configured.</li>
+</ul></li>
+<li><strong>Bootloader Execution:</strong>
+<ul>
+<li>The BIOS/UEFI loads the bootloader (e.g., GRUB for Linux, Boot Manager for Windows) from the boot sector of the selected boot device into RAM.</li>
+<li>The CPU begins executing the bootloader.</li>
+</ul></li>
+<li><strong>OS Kernel Loading:</strong>
+<ul>
+<li>The bootloader loads the operating system kernel into memory, and the kernel initializes system-level hardware drivers.</li>
+</ul></li>
+</ol>
+<p><strong>Step 6: Hardware and Software Handshaking</strong></p>
+<ol start="14" type="1">
+<li><strong>Device Driver Initialization:</strong>
+<ul>
+<li>Once the OS takes over, it loads device drivers for various hardware components:
+<ul>
+<li>CPU cores and threads (scheduler initialization).</li>
+<li>GPU and VRAM for graphical interfaces.</li>
+<li>Network interfaces for connectivity.</li>
+<li>Storage drivers for managing HDD/SSD access.</li>
+</ul></li>
+</ul></li>
+<li><strong>System Resources Allocation:</strong>
+<ul>
+<li>The operating system assigns memory addresses and I/O ports to hardware devices for communication.</li>
+</ul></li>
+</ol>
+<p>Missing: where each firmware lives, and what exactly are they; more on hard drives (partitions, file systems); more on components (from a pc builder standpoint, component matching, overclocking); embedded systems.</p>
+</section>
+<section id="operating-systems" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="operating-systems"><span class="header-section-number">4.3</span> Operating Systems</h2>
+<p>Focusing on Windows, my current OS.</p>
+</section>
+<section id="more-on-information-types" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="more-on-information-types"><span class="header-section-number">4.4</span> More on Information Types</h2>
+<p>More on how data can be stored, in different types</p>
+</section>
+<section id="parallel-computing-and-other-topics" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="parallel-computing-and-other-topics"><span class="header-section-number">4.5</span> Parallel Computing And Other Topics</h2>
+<p>Topics that will be covered in practice in Julia.</p>
 
 
+</section>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -430,7 +575,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ricardo-semiao\.github\.io\/course-ccia\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -759,7 +904,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./1-theoretical_cs.html" class="pagination-link" aria-label="Teoria da Computação">
+      <a href="./1-overview_theory.html" class="pagination-link" aria-label="Teoria da Computação">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoria da Computação</span></span>
       </a>          
   </div>

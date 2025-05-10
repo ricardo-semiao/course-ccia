@@ -1,1 +1,5 @@
 # O Baixo Nível
+
+**Disclaimer:** em construção.
+
+Esta parte tem como objetivo explicar conceitos básicos de linguagens de baixo nível, mostrando tópicos que devem estar na atenção de um programador (gerenciamento de memória, erros, e segurança). Algumas linguagens serão explicadas rapidamente, mas não como realmente um curso sobre elas, mais para exemplificar conceitos, familiarização, e mostrar como utilizar essas linguagens como acessórias em outros projetos.

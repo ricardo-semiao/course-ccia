@@ -23,7 +23,7 @@
     <link href="/site_assets/img/icon.png" rel="icon" type="image/png">
     <link href="/site_assets/img/icon.png" rel="shortcut icon" type="image/png">
 
-    <title>Ciência da Computação: Introdução e Aplicações – 11&nbsp; Julia</title>
+    <title>Ciência da Computação: Introdução e Aplicações – 11&nbsp; Julia: Performance e Ciência</title>
     <style>
         code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -124,7 +124,7 @@
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3-intro_scripting.html">Scripting</a></li><li class="breadcrumb-item"><a href="./3-julia.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3-intro_scripting.html">Scripting</a></li><li class="breadcrumb-item"><a href="./3-julia.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -152,13 +152,13 @@
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bem Vindo!</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ciência da Computação: Introdução e Aplicações</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -172,13 +172,7 @@
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-intro_cs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-theoretical_cs.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-overview_theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoria da Computação</span></span></a>
   </div>
 </li>
@@ -249,7 +243,7 @@
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3-julia.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></span></a>
   </div>
 </li>
       </ul>
@@ -333,10 +327,12 @@
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3-intro_scripting.html">Scripting</a></li><li class="breadcrumb-item"><a href="./3-julia.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></a></li></ol></nav><h1 class="title display-7"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></h1></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./3-intro_scripting.html">Scripting</a></li><li class="breadcrumb-item"><a href="./3-julia.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></a></li></ol></nav><h1 class="title display-7"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></h1></header>
         <header id="title-block-header">
             
         </header>
+<p><strong>Disclaimer:</strong> em construção.</p>
+<p>Curso sobre Julia, focado em explciar seus conceitos principais (typing e multiple dispatch), técnicas de alta performance como paralelismo, e programação científica. Provavelmente precisarei de mais capítulos.</p>
 
 
 </main> <!-- /main -->
@@ -430,7 +426,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ricardo-semiao\.github\.io\/course-ccia\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

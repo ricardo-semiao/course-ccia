@@ -1,1 +1,5 @@
 # JavaScript
+
+**Disclaimer:** em construção.
+
+Não tenho muito interesse intelectual em JavaScript, mas é útil saber o básico para poder escrever funções específicas, e principalmente, saber entender códigos externos e debug.

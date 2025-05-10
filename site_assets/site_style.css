@@ -46,7 +46,7 @@ nav li, nav li a {
 
 
 /* Links */
-a, nav a {
+a, nav a,  nav p {
     color: var(--green);
     text-decoration: none;
 }

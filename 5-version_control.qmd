@@ -1,1 +1,120 @@
 # Version Control
+
+**Disclaimer:** em construção.
+
+Neste capítulo explicarei o que é controle de versão, e como usar o Git e GitHub.
+
+Abaixo um guia simplista que fiz a um tempo.
+
+---
+
+Referência: https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control and https://www.youtube.com/watch?v=RGOj5yH7evk.
+
+# Introduction
+
+What is “version control”, and why should you care? Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+
+Git’s history: the Linux development community (and in particular Linus Torvalds, the creator of Linux) developed their own tool based on some of the lessons they learned while using BitKeeper.
+
+## Git’s Style
+
+Git saves versions of your files as snapshots:
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d9b45f00-24d7-43ef-b4d9-e6543788405f/35afbf46-92bf-4a96-8941-f51e098fcb54/Untitled.png)
+
+There are three possible states of files:
+
+- Modified means that you have changed the file but have not committed it to your database yet.
+- Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+- Committed means that the data is safely stored in your local database.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d9b45f00-24d7-43ef-b4d9-e6543788405f/96dfd732-8a5a-4134-981e-8ce2cc595ff3/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d9b45f00-24d7-43ef-b4d9-e6543788405f/e030f499-8880-40e1-8170-6325a10d4159/Untitled.png)
+
+The basic Git workflow goes something like this:
+
+1. You modify files in your working tree.
+2. You selectively stage just those changes you want to be part of your next commit, which adds ***only*** those changes to the staging area.
+3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+4. You can sync your project in the cloud, with sites like Github. Then, there is a fourth step of pushing your changes to the cloud. Also, one can pull changes made in the cloud to your own machine.
+
+## Usage
+
+There are a lot of different ways to use Git. There are the original command-line tools, and there are many graphical user interfaces of varying capabilities. For this book, we will be using Git on the command line. For one, the command line is the only place you can run ***all*** Git commands. Also if you know how to run the command-line version, you can probably also figure out how to run the GUI version, while the opposite is not necessarily true.
+
+## Installation and Setup
+
+Install git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
+
+Now, set your identity:
+
+```powershell
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+Create a github account: https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration. Use the same email as above.
+
+Generate a SSH public key and save it to your github account[.](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration) Done!
+
+# Tasks on Git
+
+## Basic Workflow
+
+- For creating a project from scratch:
+    1. Create a new folder for your project.
+    2. In the command line, set your WD to it `cd C:/Users/<user>/.../my_project`.
+    3. Initialize git `git init`.
+    4. Create a new file. It is now only on the WD stage.
+    5. Stage it with `git add <filename>`.
+    6. Commit it with `git commit -m '<your commit message>'`.
+- You can also get a project from the cloud (normally, from Github):
+    1. `git clone <url>`. This will copy all the files and the git data to your computer.
+- Now, we can set a remote (a sync reference in the cloud):
+    - If you cloned a repo from the cloud, that repo is already set as the remote.
+    - If you created from scratch:
+        1. You can get the https url to sync your project with a remote, in the green “code” button at a Github repo.
+        2. Then do `git remote add origin <url>`. Origin is the standard keyword that is being given to that remote.
+- Now, we can interact with the remote:
+    - You can push your committed changes with `git push origin main`. We referenced which remote we want to push to (origin).
+    - You can pull changes from a remote with `git pull`.
+
+Obs: main stands for the ”branch”, something we haven’t talked about yet, but is often called main or master.
+
+Keep in your mind that you can use the following commands to ask for help:
+
+```powershell
+git help <verb>
+git <verb> --help
+man git-<verb>
+```
+
+**Other tasks:**
+
+- You can see the status of your files with `git status`.
+- You can see the log of commits with `git log`.
+- You can unmodify a file with `git restore <filename>`.
+- You can unstage a file with `git restore --staged <filename>`.
+
+## Git Branching
+
+Branching means you diverge from the main line of development and continue to do work without messing with that main line.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d9b45f00-24d7-43ef-b4d9-e6543788405f/e2317977-0b40-42f3-a1c3-7b9580fb7200/Untitled.png)
+
+I wont delve into details about how to interact with branches.
+
+# Other Topics
+
+Merges and resolving conflicts.
+
+Other tasks:
+
+- Git amend, skipping the staging.
+- Git fetch.
+- Git tags, stash.
+
+Git internal files/folders such as .git, .gitignore, .gitattributes.
+
+Github important files such as README.md.

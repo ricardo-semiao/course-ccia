@@ -1,1 +1,26 @@
 # Sistemas de Computadores
+
+**Disclaimer:** em construção.
+
+Capítulo sobre sistemas de computadores, tanto em termos de sistemas "pequenos" (distribuidos), quanto em termos da Web.
+
+
+## Básico de Sistemas
+
+Conceitos teóricos e práticos de como computadores podem ser colocados em sistemas. Métodos de comunicação e protocolos.
+
+
+## Web
+
+Explicação em termos práticos, do ponto de vista de um desenvolvedor que tem que lidar com uma aplicação.
+
+Listing All the agents/structures between my computer and the web:
+
+- Start: my PC (meaning hardware + kernel + OS)
+- My browser (1. what is the relation to this and the term "client")
+- My conection to the router (cable or net board 2. any other option?)
+- My router
+- Several intermediates, such as my internet provider's servers (3. talk about this step in more detail)
+- End: the server (a computer that also stores data) where the site im interacting with is hosted
+
+Concepts such as IPs, DNS, ISP, URLs, TCP; server and client applications.

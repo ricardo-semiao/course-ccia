@@ -36,6 +36,40 @@
           margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
           vertical-align: middle;
         }
+        /* CSS for syntax highlighting */
+        pre > code.sourceCode { white-space: pre; position: relative; }
+        pre > code.sourceCode > span { line-height: 1.25; }
+        pre > code.sourceCode > span:empty { height: 1.2em; }
+        .sourceCode { overflow: visible; }
+        code.sourceCode > span { color: inherit; text-decoration: inherit; }
+        div.sourceCode { margin: 1em 0; }
+        pre.sourceCode { margin: 0; }
+        @media screen {
+        div.sourceCode { overflow: auto; }
+        }
+        @media print {
+        pre > code.sourceCode { white-space: pre-wrap; }
+        pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+        }
+        pre.numberSource code
+          { counter-reset: source-line 0; }
+        pre.numberSource code > span
+          { position: relative; left: -4em; counter-increment: source-line; }
+        pre.numberSource code > span > a:first-child::before
+          { content: counter(source-line);
+            position: relative; left: -1em; text-align: right; vertical-align: baseline;
+            border: none; display: inline-block;
+            -webkit-touch-callout: none; -webkit-user-select: none;
+            -khtml-user-select: none; -moz-user-select: none;
+            -ms-user-select: none; user-select: none;
+            padding: 0 4px; width: 4em;
+          }
+        pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+        div.sourceCode
+          {   }
+        @media screen {
+        pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+        }
     </style>
     <script id="quarto-search-options" type="application/json">{
       "location": "sidebar",
@@ -152,13 +186,13 @@
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bem Vindo!</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ciência da Computação: Introdução e Aplicações</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -172,13 +206,7 @@
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-intro_cs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-theoretical_cs.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-overview_theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Teoria da Computação</span></span></a>
   </div>
 </li>
@@ -249,7 +277,7 @@
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./3-julia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Julia: Performance e Ciência</span></span></a>
   </div>
 </li>
       </ul>
@@ -329,16 +357,542 @@
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+            <h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#databases-in-theory" id="toc-databases-in-theory" class="nav-link active" data-scroll-target="#databases-in-theory"><span class="header-section-number">17</span> 1. Databases in Theory</a>
+<ul class="collapse">
+<li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">17.1</span> 1.1 Introduction</a></li>
+<li><a href="#untangling-terms" id="toc-untangling-terms" class="nav-link" data-scroll-target="#untangling-terms"><span class="header-section-number">17.2</span> 1.2 Untangling Terms</a></li>
+<li><a href="#other-data-systems" id="toc-other-data-systems" class="nav-link" data-scroll-target="#other-data-systems"><span class="header-section-number">17.3</span> 1.3 Other Data Systems</a></li>
+</ul></li>
+<li><a href="#databases-in-practice" id="toc-databases-in-practice" class="nav-link" data-scroll-target="#databases-in-practice"><span class="header-section-number">18</span> 2. Databases in Practice</a>
+<ul class="collapse">
+<li><a href="#existing-sql-based-databases" id="toc-existing-sql-based-databases" class="nav-link" data-scroll-target="#existing-sql-based-databases"><span class="header-section-number">18.1</span> 2.1 Existing SQL-Based Databases</a></li>
+<li><a href="#getting-the-software-and-creating-a-database" id="toc-getting-the-software-and-creating-a-database" class="nav-link" data-scroll-target="#getting-the-software-and-creating-a-database"><span class="header-section-number">18.2</span> 2.2 Getting the Software and Creating a Database</a></li>
+</ul></li>
+<li><a href="#function-wise-important-concepts-of-databases" id="toc-function-wise-important-concepts-of-databases" class="nav-link" data-scroll-target="#function-wise-important-concepts-of-databases"><span class="header-section-number">19</span> 3. Function-Wise Important Concepts of Databases</a>
+<ul class="collapse">
+<li><a href="#keys" id="toc-keys" class="nav-link" data-scroll-target="#keys"><span class="header-section-number">19.1</span> 3.1 Keys</a></li>
+<li><a href="#column-configuration" id="toc-column-configuration" class="nav-link" data-scroll-target="#column-configuration"><span class="header-section-number">19.2</span> 3.2 Column Configuration</a></li>
+<li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations"><span class="header-section-number">19.3</span> 3.3 Relations</a>
+<ul class="collapse">
+<li><a href="#example-one-to-many-relationship" id="toc-example-one-to-many-relationship" class="nav-link" data-scroll-target="#example-one-to-many-relationship"><span class="header-section-number">19.3.1</span> Example – One-to-Many Relationship:</a></li>
+</ul></li>
+<li><a href="#external-materials" id="toc-external-materials" class="nav-link" data-scroll-target="#external-materials"><span class="header-section-number">19.4</span> 3.4 External Materials</a></li>
+<li><a href="#other-important-constructs" id="toc-other-important-constructs" class="nav-link" data-scroll-target="#other-important-constructs"><span class="header-section-number">19.5</span> 3.5 Other Important Constructs</a>
+<ul class="collapse">
+<li><a href="#database-indexing" id="toc-database-indexing" class="nav-link" data-scroll-target="#database-indexing"><span class="header-section-number">19.5.1</span> Database Indexing</a></li>
+<li><a href="#database-views" id="toc-database-views" class="nav-link" data-scroll-target="#database-views"><span class="header-section-number">19.5.2</span> Database Views</a></li>
+<li><a href="#stored-procedures" id="toc-stored-procedures" class="nav-link" data-scroll-target="#stored-procedures"><span class="header-section-number">19.5.3</span> Stored Procedures</a></li>
+<li><a href="#triggers" id="toc-triggers" class="nav-link" data-scroll-target="#triggers"><span class="header-section-number">19.5.4</span> Triggers</a></li>
+<li><a href="#data-integrity" id="toc-data-integrity" class="nav-link" data-scroll-target="#data-integrity"><span class="header-section-number">19.5.5</span> Data Integrity</a></li>
+<li><a href="#database-normalization" id="toc-database-normalization" class="nav-link" data-scroll-target="#database-normalization"><span class="header-section-number">19.5.6</span> Database Normalization</a></li>
+<li><a href="#transactions" id="toc-transactions" class="nav-link" data-scroll-target="#transactions"><span class="header-section-number">19.5.7</span> Transactions</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#introduction-to-sql" id="toc-introduction-to-sql" class="nav-link" data-scroll-target="#introduction-to-sql"><span class="header-section-number">20</span> 4. Introduction to SQL</a>
+<ul class="collapse">
+<li><a href="#core-sql-concepts-and-operations" id="toc-core-sql-concepts-and-operations" class="nav-link" data-scroll-target="#core-sql-concepts-and-operations"><span class="header-section-number">20.1</span> 4.1 Core SQL Concepts and Operations</a></li>
+<li><a href="#sql-syntax" id="toc-sql-syntax" class="nav-link" data-scroll-target="#sql-syntax"><span class="header-section-number">20.2</span> 4.2 SQL Syntax</a>
+<ul class="collapse">
+<li><a href="#general-sql-syntax" id="toc-general-sql-syntax" class="nav-link" data-scroll-target="#general-sql-syntax"><span class="header-section-number">20.2.1</span> General SQL Syntax</a></li>
+<li><a href="#creating-databases-and-tables" id="toc-creating-databases-and-tables" class="nav-link" data-scroll-target="#creating-databases-and-tables"><span class="header-section-number">20.2.2</span> Creating Databases and Tables</a></li>
+<li><a href="#querying" id="toc-querying" class="nav-link" data-scroll-target="#querying"><span class="header-section-number">20.2.3</span> Querying</a></li>
+<li><a href="#altering-and-managing-data" id="toc-altering-and-managing-data" class="nav-link" data-scroll-target="#altering-and-managing-data"><span class="header-section-number">20.2.4</span> Altering and Managing Data</a></li>
+<li><a href="#joining-tables" id="toc-joining-tables" class="nav-link" data-scroll-target="#joining-tables"><span class="header-section-number">20.2.5</span> Joining Tables</a></li>
+<li><a href="#aggregating-data" id="toc-aggregating-data" class="nav-link" data-scroll-target="#aggregating-data"><span class="header-section-number">20.2.6</span> Aggregating Data</a></li>
+</ul></li>
+<li><a href="#external-materials-1" id="toc-external-materials-1" class="nav-link" data-scroll-target="#external-materials-1"><span class="header-section-number">20.3</span> 4.3 External Materials</a>
+<ul class="collapse">
+<li><a href="#tutorials" id="toc-tutorials" class="nav-link" data-scroll-target="#tutorials"><span class="header-section-number">20.3.1</span> Tutorials</a></li>
+<li><a href="#examples-sqlite" id="toc-examples-sqlite" class="nav-link" data-scroll-target="#examples-sqlite"><span class="header-section-number">20.3.2</span> Examples (SQLite)</a></li>
+<li><a href="#sql-via-scripting-languages" id="toc-sql-via-scripting-languages" class="nav-link" data-scroll-target="#sql-via-scripting-languages"><span class="header-section-number">20.3.3</span> SQL Via Scripting Languages</a></li>
+</ul></li>
+</ul></li>
+</ul>
+        </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./5-databases.html">Outros Tópicos</a></li><li class="breadcrumb-item"><a href="./5-databases.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Databases</span></a></li></ol></nav><h1 class="title display-7"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Databases</span></h1></header>
         <header id="title-block-header">
             
         </header>
+        
+<p><strong>Disclaimer:</strong> em construção.</p>
+<p>Conceitos básicos sobre bancos de dados e SQL, e um pouquinho de no-SQL. Tutorial de SQLite e talvez PostgreSQL.</p>
+<p>Abaixo está um guia que fiz recentemente, que no futuro traduzirei.</p>
+<hr>
+<p>This guide introduces databases, focusing on tabular SQL databases, and is for those with intermediate programming knowledge but no experience in the topic.</p>
+<p><strong>Disclaimer:</strong> I don’t have formal education nor professional experience in databases. Much of what I explain here is based on <em>the voices</em>, and some definitions might be oversimplified.</p>
+<p><strong>Index:</strong></p>
+<p>Sections 1 and 2 are to get you out of the database illiteracy, and aren’t very applied. Section 3 start talking about more practical database concepts, and section 4 introduces SQL, with code examples and external materials.</p>
+<ol type="1">
+<li><a href="#databases-in-theory">Databases in Theory</a>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#untangling-terms">Untangling Terms</a></li>
+<li><a href="#other-data-systems">Other Data Systems</a></li>
+</ul></li>
+<li><a href="#databases-in-practice">Databases in Practice</a>
+<ul>
+<li><a href="#existing-sql-based-databases">Existing SQL-Based Databases</a></li>
+<li><a href="#getting-the-software-and-creating-a-database">Getting the Software and Creating a Database</a></li>
+</ul></li>
+<li><a href="#function-wise-important-concepts-of-databases">Function-Wise Important Concepts of Databases</a>
+<ul>
+<li><a href="#keys">Keys</a></li>
+<li><a href="#column-configuration">Column Configuration</a></li>
+<li><a href="#relations">Relations</a></li>
+<li><a href="#external-materials">External Materials</a></li>
+<li><a href="#other-important-constructs">Other Important Constructs</a></li>
+</ul></li>
+<li><a href="#introduction-to-sql">Introduction to SQL</a>
+<ul>
+<li><a href="#core-sql-concepts-and-operations">Core SQL Concepts and Operations</a></li>
+<li><a href="#sql-syntax">SQL Syntax</a></li>
+<li><a href="#external-materials">External Materials</a></li>
+</ul></li>
+</ol>
+<section id="databases-in-theory" class="level1" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> 1. Databases in Theory</h1>
+<p>Lets start by explaining some terms:</p>
+<ul>
+<li><em>Tabular data</em>: data organized in rows and columns, like a spreadsheet.</li>
+<li><em>Structured data</em>: data that is highly organized and easily searchable because it is stored in a predefined format. Tabular data is structured.</li>
+<li><em>SQL</em>: Structured Query Language, a language for managing and querying databases.</li>
+<li><em>Server</em>: a computer/storage system that provides data to other computers.</li>
+<li><em>CLI</em> and a <em>GUI</em>: Command-Line Interface (<em>terminal</em> commands) and Graphical User Interface (window/app), ways to interact with software.</li>
+</ul>
+<section id="introduction" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">17.1</span> 1.1 Introduction</h2>
+<p>A <strong>database</strong> is a collection of data. Yes, very broad. There isn’t a better definition, but below I’ll describe better a specific case of databases.</p>
+<p>There can be databases that “carry” <em>tabular data</em>, or not (ex: a database of .pdf files). Here, I’ll focus on tabular databases. These databases have their own programming language, <em>SQL</em>, and are called <em>SQL-based</em> databases.</p>
+<p>To better quality what is a (tabular) database, it is useful to compare it to the simpler concept of a single data file (a <code>.csv</code> or <code>.xlsx</code> file, for example). While <code>.csv</code> or <code>.xlsx</code> carries tabular data, databases go beyond that:</p>
+<ul>
+<li>The most important idea is that databases are a <strong>collection</strong>, they “carry” multiple “files”, and also information about their <em>configuration</em> and about how they are <em>related</em> (more on that later).
+<ul>
+<li>In the case of tabular databases, they “carry” multiple tables.</li>
+</ul></li>
+<li>But, they also have lots of logistic characteristics:
+<ul>
+<li>While one can manipulate <code>.csv</code> files in a programming language, databases are directly made to be programmatically manipulated, they even have their own programming language, SQL (more on that later).</li>
+<li>They can be stored as a file <code>.db</code>, or as something more complex, that lives in a <em>server</em>.</li>
+<li>They can be accessed by multiple users at the same time, and admins have way more security options to say who can access what.</li>
+<li>They are built with efficiency in mind, making it faster to interact with (<em>reading</em>, <em>searching</em>, and <em>writing</em>).</li>
+</ul></li>
+</ul>
+<p>Because of that, in basically any large project, a database will have organizational benefits over a maintaining a bunch of <code>.csv</code> files. They are used from e-commerce websites and social media platforms to enterprise applications and cloud-based systems.</p>
+</section>
+<section id="untangling-terms" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="untangling-terms"><span class="header-section-number">17.2</span> 1.2 Untangling Terms</h2>
+<p>We talked about some terms that can be present in a database “structured data”, “tabular data”, “relational data”, “SQL-based databases”. They have a lot of intersection and can be confusing. Lets untangle that.</p>
+<ul>
+<li><strong>Structured</strong> data is “highly organized in a predefined format”.
+<ul>
+<li>Lots of data fit that description, including tabular data.</li>
+<li>But, we can also have <strong>unstructured</strong> data, like a database of text, images, videos.</li>
+</ul></li>
+<li><strong>Tabular</strong> data is a specific type of structured data, organized in rows and columns.
+<ul>
+<li><strong>SQL</strong> is a language to interact with tabular databases, and <strong>tabular databases</strong> and <strong>SQL-based databases</strong> can be, most of the time, used interchangeably.</li>
+<li>Thus, <strong>non-tabular databases</strong> are commonly called <strong>NoSQL databases</strong>. A database of text, images, videos will be NoSQL.</li>
+</ul></li>
+<li>A tabular database can contain multiple <strong>tables</strong>. Those tables can relate to each other. If they do, we have a <strong>relational databas</strong>e, else, we don’t.</li>
+</ul>
+</section>
+<section id="other-data-systems" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="other-data-systems"><span class="header-section-number">17.3</span> 1.3 Other Data Systems</h2>
+<p>Lastly, just to give a broader view, what are these other data systems that I’m not focusing here?</p>
+<ul>
+<li>As said, we have <strong>NoSQL databases</strong>, that can carry structured but non-tabular data, or unstructured data.
+<ul>
+<li>There are different types of NoSQL databases, like document databases, graph databases, key-value stores, amongst others.</li>
+</ul></li>
+<li>There are also similar concepts to databases, that are used when we have a variety and large sizes of data
+<ul>
+<li><strong>Data Warehouses</strong>: specialized databases for analytics, optimized for complex queries on large datasets.</li>
+<li><strong>Data Lakes</strong>: a storage system for raw, unstructured data.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="databases-in-practice" class="level1" data-number="18">
+<h1 data-number="18"><span class="header-section-number">18</span> 2. Databases in Practice</h1>
+<p>It can have gone unnoticed, but what exactly am I referring to when I say “<strong>a</strong> database can be X or Y”? I’ve explained what a database is in theory, but what are them in practice? Are they the output of a specific <em>software</em>? When I talk about databases with different characteristics, am I talking about different softwares? Excellent question!</p>
+<p>Database is a concept, as explained. But in practice, indeed, we have different softwares that implement this concept. Such software must:</p>
+<ul>
+<li><strong>Save</strong> this collection of data, their relationships (if any), the access configurations, etc. somehow.
+<ul>
+<li>How are this things done, what is the type of files that are saved, where are they saved, etc. is in the purview of the software.</li>
+</ul></li>
+<li>Provide a way to <strong>interact</strong> with this data.
+<ul>
+<li>The language to interact with tabular databases is basically universal, SQL.</li>
+<li>But, the tools to pass SQL commands to affect the data is in the purview of the software, which normally provides a CLI and a GUI.</li>
+</ul></li>
+</ul>
+<section id="existing-sql-based-databases" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="existing-sql-based-databases"><span class="header-section-number">18.1</span> 2.1 Existing SQL-Based Databases</h2>
+<p>In the realm of SQL-based databases, we have a few popular softwares, like <a href="https://www.sqlite.org/">SQLite</a>, <a href="https://www.mysql.com/">MySQL</a>, <a href="https://www.postgresql.org/">PostgreSQL</a>, <a href="https://www.microsoft.com/en-us/sql-server">Microsoft SQL Server</a>, and <a href="https://www.oracle.com/database/">Oracle Database</a>. They have different characteristics, but they all implement the concept of a database.</p>
+<p>A basic description fo each is below:</p>
+<ul>
+<li><strong>SQLite</strong>: <em>file-based</em>, lightweight, ideal for small applications or testing.</li>
+<li><strong>MySQL</strong> and <strong>PostgreSQL</strong>: <em>server-based</em>, widely used for web applications and small to medium-sized businesses.</li>
+<li><strong>Microsoft SQL Server</strong> and <strong>Oracle Database</strong>: enterprise-level databases with advanced features for large-scale applications.</li>
+</ul>
+<p>There are some more technical differences, that are not that important for this introduction:</p>
+<ul>
+<li>The most important is different <strong>data capabilities</strong>: some can only store traditional tabular data (SQLite), others (PostgreSQL) can store <em>arrays</em>, <em>JSON objects</em>, amongst others.</li>
+<li><strong>Efficiency</strong> differences, some are better at reading, some are better at writing.</li>
+<li>Different <strong>security</strong> features.</li>
+</ul>
+<p>Extra: just to cite them, some common NoSQL databases are MongoDB, Cassandra, Redis, Couchbase, Neo4j, Amazon DynamoDB, amongst others.</p>
+</section>
+<section id="getting-the-software-and-creating-a-database" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="getting-the-software-and-creating-a-database"><span class="header-section-number">18.2</span> 2.2 Getting the Software and Creating a Database</h2>
+<p>Okay, you probably had enough yap and want to jump straight at it. You need to:</p>
+<ol type="1">
+<li>Choose a database software. For this introduction, we are going to use the simpler one, SQLite.</li>
+<li>Download the software.
+<ul>
+<li>Search for the <a href="https://www.sqlite.org/">software’s website</a> and download the installer. Else, use a tool like <a href="https://chocolatey.org/">Chocolatey</a> or <a href="https://brew.sh/">Homebrew</a>.</li>
+<li>Normally you install the software, and the interfaces (CLI and/or GUI).</li>
+</ul></li>
+<li>In your <em>project directory</em>, interact with the software (via CLI or GUI), and create a database.</li>
+</ol>
+<p>To “interact with the software”, you will need to learn SQL, so lets hold that for now.</p>
+</section>
+</section>
+<section id="function-wise-important-concepts-of-databases" class="level1" data-number="19">
+<h1 data-number="19"><span class="header-section-number">19</span> 3. Function-Wise Important Concepts of Databases</h1>
+<p>In this section, I’ll introduce some concepts that are important to understand the function of databases.</p>
+<section id="keys" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="keys"><span class="header-section-number">19.1</span> 3.1 Keys</h2>
+<p>In a database, we have several columns. Most of them carry variables, data associated with a row, a <em>observation</em>. But, to define what are the rows, that is, to identify each <em>observation</em>, we have the <strong>key columns</strong>. That is, keys are columns that uniquely identify each row in a table.</p>
+<p>You will encounter the concept of <strong>primary and foreign keys</strong>:</p>
+<ul>
+<li><strong>Primary Key</strong>: a unique identifier for each record in a table. It ensures that each row can be uniquely identified, preventing duplicate entries. Typically, a primary key is a single column, like <code>CustomerID</code>, though it can also be a combination of columns.</li>
+<li><strong>Foreign Key</strong>: a field in one table that uniquely identifies a row in another table. This key creates a relationship between the tables, enforcing links between data (e.g., linking orders to specific customers). Foreign keys ensure data integrity by restricting values in one table to match entries in another table.</li>
+</ul>
+</section>
+<section id="column-configuration" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="column-configuration"><span class="header-section-number">19.2</span> 3.2 Column Configuration</h2>
+<p>When defining a table, we will describe each column. The description will include:</p>
+<ul>
+<li><strong>Column Name</strong>: The name of the column, like <code>CustomerID</code> or <code>Name</code>.</li>
+<li><strong>Data Type</strong>: The type of data the column can hold, like <code>INTEGER</code>, <code>TEXT</code>, <code>DATE</code>, etc.</li>
+<li><strong>Constraints</strong>: rules applied to columns in a table to enforce data integrity, like “can’t be null”, “can’t have duplicates”, etc.</li>
+</ul>
+</section>
+<section id="relations" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="relations"><span class="header-section-number">19.3</span> 3.3 Relations</h2>
+<p>In a relational (tabular) database, <strong>relations</strong> link tables to represent meaningful connections between different data entities. These relationships reduce redundancy by storing related data in separate tables and linking them with <em>keys</em>.</p>
+<p>There are three types of relations:</p>
+<ol type="1">
+<li><strong>One-to-One (1:1)</strong>: Each row in Table A links to only one row in Table B and vice versa.</li>
+<li><strong>One-to-Many (1:N)</strong>: A single row in Table A links to multiple rows in Table B.</li>
+<li><strong>Many-to-Many (M:N)</strong>: Rows in Table A link to multiple rows in Table B and vice versa. This often requires a <em>junction table</em> to manage the links.</li>
+</ol>
+<p>And several benefits:</p>
+<ol type="1">
+<li><strong>Data Integrity</strong>: Relationships enforce consistency, ensuring that each <code>CustomerID</code> in the <code>Orders</code> table has a corresponding entry in <code>Customers</code> (view example below).</li>
+<li><strong>Reduces Redundancy</strong>: Customer information (like <code>Name</code>) is stored once in the <code>Customers</code> table rather than being repeated in <code>Orders</code>. This reduces the size of the database (view example below).</li>
+<li><strong>Simplifies Queries</strong>: By joining tables on related keys, you can easily retrieve combined information (e.g., all orders for a specific customer).</li>
+</ol>
+<p>Lets work an example to make things more concrete.</p>
+<section id="example-one-to-many-relationship" class="level3" data-number="19.3.1">
+<h3 data-number="19.3.1" class="anchored" data-anchor-id="example-one-to-many-relationship"><span class="header-section-number">19.3.1</span> Example – One-to-Many Relationship:</h3>
+<p>Consider a simple example with two tables: <code>Customers</code> and <code>Orders</code>. Each customer can place multiple orders, so this is a <em>one-to-many</em> relationship.</p>
+<p><strong>Table 1 - Customers:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>CustomerID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Alice</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bob</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Carol</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 2 - Orders:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>OrderID</th>
+<th>CustomerID</th>
+<th>OrderDate</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>101</td>
+<td>1</td>
+<td>2024-10-01</td>
+<td>50.00</td>
+</tr>
+<tr class="even">
+<td>102</td>
+<td>1</td>
+<td>2024-10-05</td>
+<td>30.00</td>
+</tr>
+<tr class="odd">
+<td>103</td>
+<td>2</td>
+<td>2024-10-07</td>
+<td>75.00</td>
+</tr>
+<tr class="even">
+<td>104</td>
+<td>3</td>
+<td>2024-10-08</td>
+<td>45.00</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>CustomerID</code> column in <code>Orders</code> refers to the <code>CustomerID</code> in <code>Customers</code>. This link is known as a <em>foreign key</em>, which creates a relationship between the two tables. Each <strong>Customer</strong> can have multiple <strong>Orders</strong>, but each <strong>Order</strong> belongs to only one <strong>Customer</strong>.</p>
+</section>
+</section>
+<section id="external-materials" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="external-materials"><span class="header-section-number">19.4</span> 3.4 External Materials</h2>
+<p>The material above is not enough, you must delve deeper on your own. From a quick search, I found some materials that <em>seem</em> to be good, but look for better ones on your own. Care to not read the SQL related parts without a previous understanding of SQL.</p>
+<ol type="1">
+<li>Keys:
+<ul>
+<li><a href="https://medium.com/learning-sql/introduction-to-sql-keys-5473c0e4e649">medium</a>.</li>
+<li><a href="https://medium.com/@muratozcann/understanding-keys-in-sql-a-comprehensive-guide-with-code-examples-af7ac147d7cd">medium, again</a>.</li>
+</ul></li>
+<li>Column configuration:
+<ul>
+<li><a href="https://www.mygreatlearning.com/blog/sql-constraints/">mygreatlearning</a>.</li>
+<li><a href="https://docs.featurebase.com/docs/sql-guide/data-types/data-types-home/">featurebase</a>.</li>
+</ul></li>
+<li>Relations:
+<ul>
+<li><a href="https://www.dittofi.com/learn/relationships-in-sql-complete-guide-with-examples">dittofi</a>.</li>
+<li><a href="https://www.metabase.com/learn/grow-your-data-skills/data-fundamentals/table-relationships">metabase</a>.</li>
+</ul></li>
+</ol>
+</section>
+<section id="other-important-constructs" class="level2" data-number="19.5">
+<h2 data-number="19.5" class="anchored" data-anchor-id="other-important-constructs"><span class="header-section-number">19.5</span> 3.5 Other Important Constructs</h2>
+<p>Now, I’ll talk about other concepts that are not essencial to your understanding of how databases work, but is good to know that they exist. Please, do not give too much attention to this, as section 5. introduces SQL and is much more important.</p>
+<section id="database-indexing" class="level3" data-number="19.5.1">
+<h3 data-number="19.5.1" class="anchored" data-anchor-id="database-indexing"><span class="header-section-number">19.5.1</span> Database Indexing</h3>
+<p>An index is a special lookup table that the database uses to speed up data retrieval. An index on a column (or multiple columns) allows the database to locate rows more quickly without scanning the entire table. Think of it as a book’s index, where you can quickly find specific information by keyword or topic.</p>
+<p>When you create an index on a column, the database creates an internal structure that organizes data in a way that makes queries faster. Indexes are especially useful for columns frequently used in search conditions (<code>WHERE</code> clauses) and joins.</p>
+</section>
+<section id="database-views" class="level3" data-number="19.5.2">
+<h3 data-number="19.5.2" class="anchored" data-anchor-id="database-views"><span class="header-section-number">19.5.2</span> Database Views</h3>
+<p>A virtual table created by querying other tables. It does not store data itself but provides a way to simplify complex queries or restrict data access. Views can help present data in a specific way without altering the underlying tables.</p>
+</section>
+<section id="stored-procedures" class="level3" data-number="19.5.3">
+<h3 data-number="19.5.3" class="anchored" data-anchor-id="stored-procedures"><span class="header-section-number">19.5.3</span> Stored Procedures</h3>
+<p>Precompiled SQL scripts saved in the database that can be executed as needed. Stored procedures help automate tasks, enforce business logic, and improve performance by reusing complex SQL.</p>
+</section>
+<section id="triggers" class="level3" data-number="19.5.4">
+<h3 data-number="19.5.4" class="anchored" data-anchor-id="triggers"><span class="header-section-number">19.5.4</span> Triggers</h3>
+<p>A set of instructions that automatically execute in response to specific database events, like insertions, updates, or deletions. Triggers are used to enforce data integrity and business rules.</p>
+</section>
+<section id="data-integrity" class="level3" data-number="19.5.5">
+<h3 data-number="19.5.5" class="anchored" data-anchor-id="data-integrity"><span class="header-section-number">19.5.5</span> Data Integrity</h3>
+<p>Maintaining and ensuring the accuracy, consistency, and reliability of data over its lifecycle. Databases enforce integrity to make sure that data remains accurate and meaningful. This can be done via programmed tests.</p>
+</section>
+<section id="database-normalization" class="level3" data-number="19.5.6">
+<h3 data-number="19.5.6" class="anchored" data-anchor-id="database-normalization"><span class="header-section-number">19.5.6</span> Database Normalization</h3>
+<p>The process of structuring tables to minimize data redundancy and dependency. The goal is to organize data in a way that reduces duplication and simplifies data maintenance. I won’t delve into the technical details of what and how is done.</p>
+</section>
+<section id="transactions" class="level3" data-number="19.5.7">
+<h3 data-number="19.5.7" class="anchored" data-anchor-id="transactions"><span class="header-section-number">19.5.7</span> Transactions</h3>
+<p>A group of SQL operations executed as a single unit. If one operation fails, the entire transaction can be rolled back to maintain data consistency. Normally, they are planned following some principles, the ACID properties. I won’t delve into the technical details of what and how is done.</p>
+</section>
+</section>
+</section>
+<section id="introduction-to-sql" class="level1" data-number="20">
+<h1 data-number="20"><span class="header-section-number">20</span> 4. Introduction to SQL</h1>
+<p><strong>SQL</strong> (Structured Query Language) is a language designed to manage and manipulate data in a relational database. It has various pronunciations, such as “sequel” or “S-Q-L”.</p>
+<p>SQL <em>commands</em> can be passed to a database via CLI or GUI, and can also be stored in a <em>plain-text</em> <code>.sql</code> file. External programming languages like Python have <em>packages</em> to run SQL commands.</p>
+<section id="core-sql-concepts-and-operations" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="core-sql-concepts-and-operations"><span class="header-section-number">20.1</span> 4.1 Core SQL Concepts and Operations</h2>
+<p>Before delving into the <em>syntax</em>, lets understand what are the possible operations. They can be categorized in three “boxes”:</p>
+<ul>
+<li><strong>Creating Databases and Tables</strong>: Defining the structure of data storage.
+<ul>
+<li>What are the columns names, types, and constraints going to be.</li>
+</ul></li>
+<li><strong>Querying</strong>: Retrieving specific data using <code>SELECT</code> statements and conditions.
+<ul>
+<li>You might have seen them in places like Python’s <code>pandas.query()</code> or R’s <code>dplyr::filter()</code>.</li>
+</ul></li>
+<li><strong>Altering and Managing Data</strong>: Updating, inserting, or deleting data and modifying table structures.
+<ul>
+<li>Lots of possible operations, adding/deleting/altering rows or columns, renaming columns, changing constraints, etc.</li>
+</ul></li>
+<li><strong>Joining Tables</strong>: Combining data from multiple tables based on relationships.
+<ul>
+<li>There are different types of joins, and you might have seen them in places like Python’s <code>pandas.merge()</code> or R’s <code>dplyr::left_join()</code>.</li>
+</ul></li>
+<li><strong>Aggregating Data</strong>: Summarizing data. Can be done in groups.
+<ul>
+<li>You might have seen them in places like R’s <code>pandas.DataFrame.agg()</code>, <code>dplyr::summarize()</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="sql-syntax" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="sql-syntax"><span class="header-section-number">20.2</span> 4.2 SQL Syntax</h2>
+<p>Now, lets dive into the actual syntax and commands. This will be very brief, and again, not enough, such that there is a “external materials” section at the end.</p>
+<p>In SQL, commands are written as <strong>statements</strong> that describe actions you want to perform on the database. SQL is <em>case-insensitive</em>, though keywords are typically written in uppercase for readability.</p>
+<section id="general-sql-syntax" class="level3" data-number="20.2.1">
+<h3 data-number="20.2.1" class="anchored" data-anchor-id="general-sql-syntax"><span class="header-section-number">20.2.1</span> General SQL Syntax</h3>
+<ul>
+<li><strong>Commands</strong>: Each SQL command (like <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>) generally starts with a keyword indicating the action.</li>
+<li><strong>Clauses</strong>: Clauses (like <code>WHERE</code>, <code>ORDER BY</code>) define conditions or ordering within commands.</li>
+<li><strong>Semicolon</strong>: Most SQL implementations end statements with a <code>;</code>, marking the end of the command.</li>
+<li><strong>Comments</strong>: Use <code>--</code> for single-line comments and <code>/* ... */</code> for multi-line comments.</li>
+</ul>
+</section>
+<section id="creating-databases-and-tables" class="level3" data-number="20.2.2">
+<h3 data-number="20.2.2" class="anchored" data-anchor-id="creating-databases-and-tables"><span class="header-section-number">20.2.2</span> Creating Databases and Tables</h3>
+<p>Creating a database and defining a table with columns, data types, and constraints.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a new database</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> MyDatabase;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select a database to work with</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> MyDatabase;</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create a new table</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Customers (</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    CustomerID <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    Name <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    Email <span class="dt">VARCHAR</span>(<span class="dv">100</span>) <span class="kw">UNIQUE</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="querying" class="level3" data-number="20.2.3">
+<h3 data-number="20.2.3" class="anchored" data-anchor-id="querying"><span class="header-section-number">20.2.3</span> Querying</h3>
+<p>Retrieving data using <code>SELECT</code> with conditions.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select all columns from a table</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> Customers;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- Select specific columns with a condition</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Name, Email</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> CustomerID <span class="op">=</span> <span class="dv">1</span>;</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- Order results</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> Customers</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> Name <span class="kw">ASC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="altering-and-managing-data" class="level3" data-number="20.2.4">
+<h3 data-number="20.2.4" class="anchored" data-anchor-id="altering-and-managing-data"><span class="header-section-number">20.2.4</span> Altering and Managing Data</h3>
+<p>Inserting, updating, and deleting data, as well as modifying table structures.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Insert new data into a table</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> Customers (CustomerID, Name, Email)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span> (<span class="dv">1</span>, <span class="st">'Alice'</span>, <span class="st">'alice@example.com'</span>);</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Update data in a table</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> Customers</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> Email <span class="op">=</span> <span class="st">'newalice@example.com'</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> CustomerID <span class="op">=</span> <span class="dv">1</span>;</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">-- Delete data from a table</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> Customers</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> CustomerID <span class="op">=</span> <span class="dv">1</span>;</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">-- Add a new column to an existing table</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> Customers</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">ADD</span> Phone <span class="dt">VARCHAR</span>(<span class="dv">15</span>);</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">-- Drop a column from a table</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> Customers</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">COLUMN</span> Phone;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="joining-tables" class="level3" data-number="20.2.5">
+<h3 data-number="20.2.5" class="anchored" data-anchor-id="joining-tables"><span class="header-section-number">20.2.5</span> Joining Tables</h3>
+<p>Combining data from multiple tables based on a shared key.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Example tables</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Orders (</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    OrderID <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    CustomerID <span class="dt">INT</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    Amount <span class="dt">DECIMAL</span>(<span class="dv">10</span>, <span class="dv">2</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (CustomerID) <span class="kw">REFERENCES</span> Customers(CustomerID)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- Join Customers and Orders tables to find all orders for each customer</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Customers.Name, Orders.OrderID, Orders.Amount</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> Orders <span class="kw">ON</span> Customers.CustomerID <span class="op">=</span> Orders.CustomerID;</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">-- Left join to include customers with no orders</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Customers.Name, Orders.OrderID, Orders.Amount</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> Orders <span class="kw">ON</span> Customers.CustomerID <span class="op">=</span> Orders.CustomerID;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="aggregating-data" class="level3" data-number="20.2.6">
+<h3 data-number="20.2.6" class="anchored" data-anchor-id="aggregating-data"><span class="header-section-number">20.2.6</span> Aggregating Data</h3>
+<p>Summarizing data with functions like <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, etc., often using <code>GROUP BY</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Count the number of customers</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> TotalCustomers</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Customers;</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Calculate total order amount for each customer</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> CustomerID, <span class="fu">SUM</span>(Amount) <span class="kw">AS</span> TotalSpent</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Orders</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> CustomerID;</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">-- Find the average order amount</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">AVG</span>(Amount) <span class="kw">AS</span> AverageOrder</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Orders;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="external-materials-1" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="external-materials-1"><span class="header-section-number">20.3</span> 4.3 External Materials</h2>
+<p>The material above is not enough, you must delve deeper on your own. From a quick search, I found some materials that <em>seem</em> to be good, but look for better ones on your own.</p>
+<section id="tutorials" class="level3" data-number="20.3.1">
+<h3 data-number="20.3.1" class="anchored" data-anchor-id="tutorials"><span class="header-section-number">20.3.1</span> Tutorials</h3>
+<ul>
+<li><a href="https://www.w3schools.com/sql/">w3schools</a>. This one presents information via little snippets.</li>
+<li><a href="https://www.sqltutorial.org/">sqltutorial</a>. This one separates the content in “boxes”, similar to what I’ve done above.</li>
+<li><a href="https://mode.com/sql-tutorial/introduction-to-sql">mode</a>. A larger, lesson-based one.</li>
+<li><a href="https://www.tutorialspoint.com/sql/index.htm">tutorialspoint</a>.</li>
+</ul>
+<p>To test the codes in these examples, you will need to setup a database. So its probably good to mess around with your own database first. For that, consider the section below.</p>
+</section>
+<section id="examples-sqlite" class="level3" data-number="20.3.2">
+<h3 data-number="20.3.2" class="anchored" data-anchor-id="examples-sqlite"><span class="header-section-number">20.3.2</span> Examples (SQLite)</h3>
+<ul>
+<li><a href="https://www.guru99.com/sqlite-tutorial.html">guru99’s</a>.</li>
+<li><a href="https://www.youtube.com/watch?v=GMHK-0TKRVk">TutorialBrain</a> (Youtube video).</li>
+<li><a href="https://www.youtube.com/playlist?list=PLS1QulWo1RIa0-Cs2Qx6GFyiIVVVS9lCS">ProgrammingKnowledge</a> (Youtube playlist).</li>
+</ul>
+<p>Care that they might be out of date.</p>
+</section>
+<section id="sql-via-scripting-languages" class="level3" data-number="20.3.3">
+<h3 data-number="20.3.3" class="anchored" data-anchor-id="sql-via-scripting-languages"><span class="header-section-number">20.3.3</span> SQL Via Scripting Languages</h3>
+<p>As I said, one can connect to databases via packages from scripting languages, and run SQL commands. Here are some examples:</p>
+<ul>
+<li>Python: <a href="https://docs.python.org/3/library/sqlite3.html">sqlite3</a> (database-specific), <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>, and <a href="https://pandas.pydata.org/docs/index.html">pandas</a> has functions to connect with databases.</li>
+<li>R: <a href="https://cran.r-project.org/web/packages/DBI/index.html">DBI</a> (basic conector to databases), <a href="https://cran.r-project.org/web/packages/RSQLite/index.html">RSQLite</a>/<a href="https://cran.r-project.org/web/packages/RPostgres/index.html">RPostgres</a> (database-specific), and <a href="https://dbplyr.tidyverse.org/">dbplyr</a> (a copy of the famous dplyr, that works with databases instead of dataframes).</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -430,7 +984,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ricardo-semiao\.github\.io\/course-ccia\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

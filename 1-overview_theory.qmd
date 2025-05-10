@@ -1,0 +1,32 @@
+# Teoria da Computação
+
+**Disclaimer:** em construção.
+
+O objetivo da parte 1 é contextualizar como um computador funciona, e como computação é entendida. Isto gerará insumos para entender como pensar em algorítimos, e entender o funcionamento das ferramentas de programação.
+
+Neste primeiro capítulo, definirei a visão geral do campo. A seguir, falarei da CC teórica: teoria da computação, informação e código, estruturas, e algorítimos.
+
+
+## Overview
+
+Big picture, e o que será tratado em cada capítulo.
+
+
+## Informação
+
+Como informação é representada por binário, e outros sistemas em cima disso.
+
+
+## Computação
+
+Como informação é processada. Circuitos lógicos e o que pode ser automatizado.
+
+
+## Estruturas de Dados e Algorítimos
+
+Estruturas de dados e algorítimos
+
+
+## Linguagens de Programação
+
+Funcionamento geral, características e classificação dos designs.

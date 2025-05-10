@@ -3,17 +3,26 @@ project:
   output-dir: docs
   post-render: assets\template\adust_links.py
 
+format:
+  html:
+    template: assets\template\rsquartobook_html.template
+    theme:
+      - cosmo
+      - brand
+
+bibliography: references.bib
+
 book:
   title: "Ciência da Computação: Introdução e Aplicações"
   author: "Ricardo Semião e Castro"
   date: "07/05/2025"
+  site-url: https://ricardo-semiao.github.io/course-ccia/
   chapters:
     - index.qmd
     - intro.qmd
     - part: "Ciência da Computação"
       chapters:
-        - 1-intro_cs.qmd
-        - 1-theoretical_cs.qmd
+        - 1-overview_theory.qmd
         - 1-computer_architecture.qmd
         - 1-programming_software.qmd
         - 1-computer_systems.qmd
@@ -38,12 +47,3 @@ book:
         - 5-good_practices.qmd
         - 5-version_control.qmd
     - references.qmd
-
-bibliography: references.bib
-
-format:
-  html:
-    template: assets\template\rsquartobook_html.template
-    theme:
-      - cosmo
-      - brand

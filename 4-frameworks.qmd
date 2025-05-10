@@ -1,1 +1,5 @@
 # Frameworks
+
+**Disclaimer:** em construção.
+
+Neste capítulo explicarei o que são frameworks web. Em algum momento escolherei um de meu interesse, e resumirei-o aqui. Considero algo com HTMX, jango-jinja, ou Svelte.

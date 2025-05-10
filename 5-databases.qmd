@@ -1,1 +1,430 @@
 # Databases
+
+**Disclaimer:** em construção.
+
+Conceitos básicos sobre bancos de dados e SQL, e um pouquinho de no-SQL. Tutorial de SQLite e talvez PostgreSQL.
+
+Abaixo está um guia que fiz recentemente, que no futuro traduzirei.
+
+---
+
+This guide introduces databases, focusing on tabular SQL databases, and is for those with intermediate programming knowledge but no experience in the topic.
+
+**Disclaimer:** I don't have formal education nor professional experience in databases. Much of what I explain here is based on _the voices_, and some definitions might be oversimplified.
+
+**Index:**
+
+Sections 1 and 2 are to get you out of the database illiteracy, and aren't very applied. Section 3 start talking about more practical database concepts, and section 4 introduces SQL, with code examples and external materials.
+
+1. [Databases in Theory](#databases-in-theory)
+    - [Introduction](#introduction)
+    - [Untangling Terms](#untangling-terms)
+    - [Other Data Systems](#other-data-systems)
+2. [Databases in Practice](#databases-in-practice)
+    - [Existing SQL-Based Databases](#existing-sql-based-databases)
+    - [Getting the Software and Creating a Database](#getting-the-software-and-creating-a-database)
+3. [Function-Wise Important Concepts of Databases](#function-wise-important-concepts-of-databases)
+    - [Keys](#keys)
+    - [Column Configuration](#column-configuration)
+    - [Relations](#relations)
+    - [External Materials](#external-materials)
+    - [Other Important Constructs](#other-important-constructs)
+4. [Introduction to SQL](#introduction-to-sql)
+    - [Core SQL Concepts and Operations](#core-sql-concepts-and-operations)
+    - [SQL Syntax](#sql-syntax)
+    - [External Materials](#external-materials)
+
+
+
+# 1. Databases in Theory
+
+Lets start by explaining some terms:
+
+- _Tabular data_: data organized in rows and columns, like a spreadsheet.
+- _Structured data_: data that is highly organized and easily searchable because it is stored in a predefined format. Tabular data is structured.
+- _SQL_: Structured Query Language, a language for managing and querying databases.
+- _Server_: a computer/storage system that provides data to other computers.
+- _CLI_ and a _GUI_: Command-Line Interface (_terminal_ commands) and Graphical User Interface (window/app), ways to interact with software.
+
+## 1.1 Introduction
+
+A **database** is a collection of data. Yes, very broad. There isn't a better definition, but below I'll describe better a specific case of databases.
+
+There can be databases that "carry" _tabular data_, or not (ex: a database of .pdf files). Here, I'll focus on tabular databases. These databases have their own programming language, _SQL_, and are called _SQL-based_ databases.
+
+To better quality what is a (tabular) database, it is useful to compare it to the simpler concept of a single data file (a `.csv` or `.xlsx` file, for example). While `.csv` or `.xlsx` carries tabular data, databases go beyond that:
+
+- The most important idea is that databases are a **collection**, they "carry" multiple "files", and also information about their _configuration_ and about how they are _related_ (more on that later).
+    - In the case of tabular databases, they "carry" multiple tables.
+- But, they also have lots of logistic characteristics:
+    - While one can manipulate `.csv` files in a programming language, databases are directly made to be programmatically manipulated, they even have their own programming language, SQL (more on that later).
+    - They can be stored as a file `.db`, or as something more complex, that lives in a _server_.
+    - They can be accessed by multiple users at the same time, and admins have way more security options to say who can access what.
+    - They are built with efficiency in mind, making it faster to interact with (_reading_, _searching_, and _writing_).
+
+Because of that, in basically any large project, a database will have organizational benefits over a maintaining a bunch of `.csv` files. They are used from e-commerce websites and social media platforms to enterprise applications and cloud-based systems.
+
+
+## 1.2 Untangling Terms
+
+We talked about some terms that can be present in a database "structured data", "tabular data", "relational data", "SQL-based databases". They have a lot of intersection and can be confusing. Lets untangle that.
+
+- **Structured** data is "highly organized in a predefined format".
+    - Lots of data fit that description, including tabular data.
+    - But, we can also have **unstructured** data, like a database of text, images, videos.
+- **Tabular** data is a specific type of structured data, organized in rows and columns.
+    - **SQL** is a language to interact with tabular databases, and **tabular databases** and **SQL-based databases** can be, most of the time, used interchangeably.
+    - Thus, **non-tabular databases** are commonly called **NoSQL databases**. A database of text, images, videos will be NoSQL.
+- A tabular database can contain multiple **tables**. Those tables can relate to each other. If they do, we have a **relational databas**e, else, we don't.
+
+
+## 1.3 Other Data Systems
+
+Lastly, just to give a broader view, what are these other data systems that I'm not focusing here?
+
+- As said, we have **NoSQL databases**, that can carry structured but non-tabular data, or unstructured data.
+    - There are different types of NoSQL databases, like document databases, graph databases, key-value stores, amongst others.
+- There are also similar concepts to databases, that are used when we have a variety and large sizes of data
+    - **Data Warehouses**: specialized databases for analytics, optimized for complex queries on large datasets. 
+    - **Data Lakes**: a storage system for raw, unstructured data.
+
+
+# 2. Databases in Practice
+
+It can have gone unnoticed, but what exactly am I referring to when I say "**a** database can be X or Y"? I've explained what a database is in theory, but what are them in practice? Are they the output of a specific _software_? When I talk about databases with different characteristics, am I talking about different softwares? Excellent question!
+
+Database is a concept, as explained. But in practice, indeed, we have different softwares that implement this concept. Such software must:
+
+- **Save** this collection of data, their relationships (if any), the access configurations, etc. somehow.
+    - How are this things done, what is the type of files that are saved, where are they saved, etc. is in the purview of the software.
+- Provide a way to **interact** with this data.
+    - The language to interact with tabular databases is basically universal, SQL.
+    - But, the tools to pass SQL commands to affect the data is in the purview of the software, which normally provides a CLI and a GUI.
+
+
+## 2.1 Existing SQL-Based Databases
+
+In the realm of SQL-based databases, we have a few popular softwares, like [SQLite](https://www.sqlite.org/), [MySQL](https://www.mysql.com/), [PostgreSQL](https://www.postgresql.org/), [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server), and [Oracle Database](https://www.oracle.com/database/). They have different characteristics, but they all implement the concept of a database.
+
+A basic description fo each is below:
+
+- **SQLite**: _file-based_, lightweight, ideal for small applications or testing.
+- **MySQL** and **PostgreSQL**: _server-based_, widely used for web applications and small to medium-sized businesses.
+- **Microsoft SQL Server** and **Oracle Database**: enterprise-level databases with advanced features for large-scale applications.
+
+There are some more technical differences, that are not that important for this introduction:
+
+- The most important is different **data capabilities**: some can only store traditional tabular data (SQLite), others (PostgreSQL) can store _arrays_, _JSON objects_, amongst others.
+- **Efficiency** differences, some are better at reading, some are better at writing.
+- Different **security** features.
+
+Extra: just to cite them, some common NoSQL databases are MongoDB, Cassandra, Redis, Couchbase, Neo4j, Amazon DynamoDB, amongst others.
+
+
+## 2.2 Getting the Software and Creating a Database
+
+Okay, you probably had enough yap and want to jump straight at it. You need to:
+
+1. Choose a database software. For this introduction, we are going to use the simpler one, SQLite.
+2. Download the software.
+    - Search for the [software's website](https://www.sqlite.org/) and download the installer. Else, use a tool like [Chocolatey](https://chocolatey.org/) or [Homebrew](https://brew.sh/).
+    - Normally you install the software, and the interfaces (CLI and/or GUI).
+3. In your _project directory_, interact with the software (via CLI or GUI), and create a database.
+
+To "interact with the software", you will need to learn SQL, so lets hold that for now.
+
+
+# 3. Function-Wise Important Concepts of Databases
+
+In this section, I'll introduce some concepts that are important to understand the function of databases.
+
+
+## 3.1 Keys
+
+In a database, we have several columns. Most of them carry variables, data associated with a row, a _observation_. But, to define what are the rows, that is, to identify each _observation_, we have the **key columns**. That is, keys are columns that uniquely identify each row in a table.
+
+You will encounter the concept of **primary and foreign keys**:
+
+- **Primary Key**: a unique identifier for each record in a table. It ensures that each row can be uniquely identified, preventing duplicate entries. Typically, a primary key is a single column, like `CustomerID`, though it can also be a combination of columns.
+- **Foreign Key**: a field in one table that uniquely identifies a row in another table. This key creates a relationship between the tables, enforcing links between data (e.g., linking orders to specific customers). Foreign keys ensure data integrity by restricting values in one table to match entries in another table.
+
+
+## 3.2 Column Configuration
+
+When defining a table, we will describe each column. The description will include:
+
+- **Column Name**: The name of the column, like `CustomerID` or `Name`.
+- **Data Type**: The type of data the column can hold, like `INTEGER`, `TEXT`, `DATE`, etc.
+- **Constraints**: rules applied to columns in a table to enforce data integrity, like "can't be null", "can't have duplicates", etc.
+
+
+## 3.3 Relations
+
+In a relational (tabular) database, **relations** link tables to represent meaningful connections between different data entities. These relationships reduce redundancy by storing related data in separate tables and linking them with _keys_.
+
+There are three types of relations:
+
+1. **One-to-One (1:1)**: Each row in Table A links to only one row in Table B and vice versa.
+2. **One-to-Many (1:N)**: A single row in Table A links to multiple rows in Table B.
+3. **Many-to-Many (M:N)**: Rows in Table A link to multiple rows in Table B and vice versa. This often requires a _junction table_ to manage the links.
+
+And several benefits:
+
+1. **Data Integrity**: Relationships enforce consistency, ensuring that each `CustomerID` in the `Orders` table has a corresponding entry in `Customers` (view example below).
+2. **Reduces Redundancy**: Customer information (like `Name`) is stored once in the `Customers` table rather than being repeated in `Orders`. This reduces the size of the database (view example below).
+3. **Simplifies Queries**: By joining tables on related keys, you can easily retrieve combined information (e.g., all orders for a specific customer).
+
+Lets work an example to make things more concrete.
+
+
+### Example -- One-to-Many Relationship:
+
+Consider a simple example with two tables: `Customers` and `Orders`. Each customer can place multiple orders, so this is a _one-to-many_ relationship.
+
+**Table 1 - Customers:**
+
+| CustomerID | Name       |
+|------------|------------|
+| 1          | Alice      |
+| 2          | Bob        |
+| 3          | Carol      |
+
+**Table 2 - Orders:**
+
+| OrderID | CustomerID | OrderDate   | Amount |
+|---------|------------|-------------|--------|
+| 101     | 1          | 2024-10-01  | 50.00  |
+| 102     | 1          | 2024-10-05  | 30.00  |
+| 103     | 2          | 2024-10-07  | 75.00  |
+| 104     | 3          | 2024-10-08  | 45.00  |
+
+The `CustomerID` column in `Orders` refers to the `CustomerID` in `Customers`. This link is known as a _foreign key_, which creates a relationship between the two tables. Each **Customer** can have multiple **Orders**, but each **Order** belongs to only one **Customer**.
+
+
+## 3.4 External Materials
+
+The material above is not enough, you must delve deeper on your own. From a quick search, I found some materials that _seem_ to be good, but look for better ones on your own. Care to not read the SQL related parts without a previous understanding of SQL.
+
+1. Keys:
+    - [medium](https://medium.com/learning-sql/introduction-to-sql-keys-5473c0e4e649).
+    - [medium, again](https://medium.com/@muratozcann/understanding-keys-in-sql-a-comprehensive-guide-with-code-examples-af7ac147d7cd).
+2. Column configuration:
+    - [mygreatlearning](https://www.mygreatlearning.com/blog/sql-constraints/).
+    - [featurebase](https://docs.featurebase.com/docs/sql-guide/data-types/data-types-home/).
+3. Relations:
+    - [dittofi](https://www.dittofi.com/learn/relationships-in-sql-complete-guide-with-examples).
+    - [metabase](https://www.metabase.com/learn/grow-your-data-skills/data-fundamentals/table-relationships).
+
+
+## 3.5 Other Important Constructs
+
+Now, I'll talk about other concepts that are not essencial to your understanding of how databases work, but is good to know that they exist. Please, do not give too much attention to this, as section 5. introduces SQL and is much more important.
+
+### Database Indexing
+
+An index is a special lookup table that the database uses to speed up data retrieval. An index on a column (or multiple columns) allows the database to locate rows more quickly without scanning the entire table. Think of it as a book’s index, where you can quickly find specific information by keyword or topic.
+
+When you create an index on a column, the database creates an internal structure that organizes data in a way that makes queries faster. Indexes are especially useful for columns frequently used in search conditions (`WHERE` clauses) and joins.
+
+### Database Views
+
+A virtual table created by querying other tables. It does not store data itself but provides a way to simplify complex queries or restrict data access. Views can help present data in a specific way without altering the underlying tables.
+
+### Stored Procedures
+
+Precompiled SQL scripts saved in the database that can be executed as needed. Stored procedures help automate tasks, enforce business logic, and improve performance by reusing complex SQL.
+
+### Triggers
+
+A set of instructions that automatically execute in response to specific database events, like insertions, updates, or deletions. Triggers are used to enforce data integrity and business rules.
+
+### Data Integrity
+
+Maintaining and ensuring the accuracy, consistency, and reliability of data over its lifecycle. Databases enforce integrity to make sure that data remains accurate and meaningful. This can be done via programmed tests.
+
+### Database Normalization
+
+The process of structuring tables to minimize data redundancy and dependency. The goal is to organize data in a way that reduces duplication and simplifies data maintenance. I won't delve into the technical details of what and how is done.
+
+### Transactions
+
+A group of SQL operations executed as a single unit. If one operation fails, the entire transaction can be rolled back to maintain data consistency. Normally, they are planned following some principles, the ACID properties. I won't delve into the technical details of what and how is done.
+
+
+# 4. Introduction to SQL
+
+**SQL** (Structured Query Language) is a language designed to manage and manipulate data in a relational database. It has various pronunciations, such as "sequel" or "S-Q-L".
+
+SQL _commands_ can be passed to a database via CLI or GUI, and can also be stored in a _plain-text_ `.sql` file. External programming languages like Python have _packages_ to run SQL commands.
+
+
+## 4.1 Core SQL Concepts and Operations
+
+Before delving into the _syntax_, lets understand what are the possible operations. They can be categorized in three "boxes":
+
+- **Creating Databases and Tables**: Defining the structure of data storage.
+    - What are the columns names, types, and constraints going to be.
+- **Querying**: Retrieving specific data using `SELECT` statements and conditions.
+    - You might have seen them in places like Python's `pandas.query()` or R's `dplyr::filter()`.
+- **Altering and Managing Data**: Updating, inserting, or deleting data and modifying table structures.
+    - Lots of possible operations, adding/deleting/altering rows or columns, renaming columns, changing constraints, etc.
+- **Joining Tables**: Combining data from multiple tables based on relationships.
+    - There are different types of joins, and you might have seen them in places like Python's `pandas.merge()` or R's `dplyr::left_join()`.
+- **Aggregating Data**: Summarizing data. Can be done in groups.
+    - You might have seen them in places like R's `pandas.DataFrame.agg()`, `dplyr::summarize()`.
+
+
+## 4.2 SQL Syntax
+
+Now, lets dive into the actual syntax and commands. This will be very brief, and again, not enough, such that there is a "external materials" section at the end.
+
+In SQL, commands are written as **statements** that describe actions you want to perform on the database. SQL is _case-insensitive_, though keywords are typically written in uppercase for readability.
+
+
+### General SQL Syntax
+
+- **Commands**: Each SQL command (like `SELECT`, `INSERT`, `UPDATE`) generally starts with a keyword indicating the action.
+- **Clauses**: Clauses (like `WHERE`, `ORDER BY`) define conditions or ordering within commands.
+- **Semicolon**: Most SQL implementations end statements with a `;`, marking the end of the command.
+- **Comments**: Use `--` for single-line comments and `/* ... */` for multi-line comments.
+
+
+### Creating Databases and Tables
+
+Creating a database and defining a table with columns, data types, and constraints.
+
+```sql
+-- Create a new database
+CREATE DATABASE MyDatabase;
+
+-- Select a database to work with
+USE MyDatabase;
+
+-- Create a new table
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE
+);
+```
+
+### Querying
+
+Retrieving data using `SELECT` with conditions.
+
+```sql
+-- Select all columns from a table
+SELECT * FROM Customers;
+
+-- Select specific columns with a condition
+SELECT Name, Email
+FROM Customers
+WHERE CustomerID = 1;
+
+-- Order results
+SELECT * FROM Customers
+ORDER BY Name ASC;
+```
+
+### Altering and Managing Data
+
+Inserting, updating, and deleting data, as well as modifying table structures.
+
+```sql
+-- Insert new data into a table
+INSERT INTO Customers (CustomerID, Name, Email)
+VALUES (1, 'Alice', 'alice@example.com');
+
+-- Update data in a table
+UPDATE Customers
+SET Email = 'newalice@example.com'
+WHERE CustomerID = 1;
+
+-- Delete data from a table
+DELETE FROM Customers
+WHERE CustomerID = 1;
+
+-- Add a new column to an existing table
+ALTER TABLE Customers
+ADD Phone VARCHAR(15);
+
+-- Drop a column from a table
+ALTER TABLE Customers
+DROP COLUMN Phone;
+```
+
+
+### Joining Tables
+
+Combining data from multiple tables based on a shared key.
+
+```sql
+-- Example tables
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    Amount DECIMAL(10, 2),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+-- Join Customers and Orders tables to find all orders for each customer
+SELECT Customers.Name, Orders.OrderID, Orders.Amount
+FROM Customers
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+
+-- Left join to include customers with no orders
+SELECT Customers.Name, Orders.OrderID, Orders.Amount
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+```
+
+
+### Aggregating Data
+
+Summarizing data with functions like `COUNT`, `SUM`, `AVG`, etc., often using `GROUP BY`.
+
+```sql
+-- Count the number of customers
+SELECT COUNT(*) AS TotalCustomers
+FROM Customers;
+
+-- Calculate total order amount for each customer
+SELECT CustomerID, SUM(Amount) AS TotalSpent
+FROM Orders
+GROUP BY CustomerID;
+
+-- Find the average order amount
+SELECT AVG(Amount) AS AverageOrder
+FROM Orders;
+```
+
+## 4.3 External Materials
+
+The material above is not enough, you must delve deeper on your own. From a quick search, I found some materials that _seem_ to be good, but look for better ones on your own.
+
+### Tutorials
+
+- [w3schools](https://www.w3schools.com/sql/). This one presents information via little snippets.
+- [sqltutorial](https://www.sqltutorial.org/). This one separates the content in "boxes", similar to what I've done above.
+- [mode](https://mode.com/sql-tutorial/introduction-to-sql). A larger, lesson-based one.
+- [tutorialspoint](https://www.tutorialspoint.com/sql/index.htm).
+
+To test the codes in these examples, you will need to setup a database. So its probably good to mess around with your own database first. For that, consider the section below.
+
+
+### Examples (SQLite)
+
+- [guru99's](https://www.guru99.com/sqlite-tutorial.html).
+- [TutorialBrain](https://www.youtube.com/watch?v=GMHK-0TKRVk) (Youtube video).
+- [ProgrammingKnowledge](https://www.youtube.com/playlist?list=PLS1QulWo1RIa0-Cs2Qx6GFyiIVVVS9lCS) (Youtube playlist).
+
+Care that they might be out of date.
+
+
+### SQL Via Scripting Languages
+
+As I said, one can connect to databases via packages from scripting languages, and run SQL commands. Here are some examples:
+
+- Python: [sqlite3](https://docs.python.org/3/library/sqlite3.html) (database-specific), [SQLAlchemy](https://www.sqlalchemy.org/), and [pandas](https://pandas.pydata.org/docs/index.html) has functions to connect with databases.
+- R: [DBI](https://cran.r-project.org/web/packages/DBI/index.html) (basic conector to databases), [RSQLite](https://cran.r-project.org/web/packages/RSQLite/index.html)/[RPostgres](https://cran.r-project.org/web/packages/RPostgres/index.html) (database-specific), and [dbplyr](https://dbplyr.tidyverse.org/) (a copy of the famous dplyr, that works with databases instead of dataframes).
+

@@ -1,1 +1,5 @@
 # Desenvolvimento Web
+
+**Disclaimer:** em construção.
+
+Este capítulo relaciona os conceitos de sistemas de computadores e web, explicados na primeira parte, com como eles se encaixam no desenvolvimento web. Aqui será explicado o workflow e conceitos práticos gerais.

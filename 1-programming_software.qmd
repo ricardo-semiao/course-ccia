@@ -1,1 +1,19 @@
 # Programação e Engenharia de Software
+
+**Disclaimer:** em construção.
+
+Conceitos gerais para construir uma base para entender linguagens de programação com uma visão geral.
+
+Tópicos como teoria de compiladores, design, tipos de código. Type theory e paradigmas.
+
+Abaixo um pequeno excerto sobre tipos de código.
+
+---
+
+Machine code: the binary code (instructions) that are the lowest level of comunication with the CPU (via the Kernel, obviously). Each OS will have its own machine code, as its dependent on the architecture an stuff.
+
+Bytecode: an intermediate code, with hexadecimals and macro instructions (add, swap, etc.), that can’t be readed by a machine, and must be interpreted into machine code. But, it is flexible, and normally associated with code that can be run by any OS.
+
+Compiled languages are ones where a compiler translate the entire code directly into machine code, at compile-time. They can’t be ran interactively, as the only thing that can be run is the compiled machine code, but, are fast. Are associated with lower-level languages.
+
+Interpreted languages are ones where an interpreter pass the instructions to the machine for each block of code at run-time. Can be run interactively, but have an additional overhead. Are associated with higher-level languages, as can be more flexible with dynamic typing and such.

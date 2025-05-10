@@ -1,1 +1,7 @@
 # Scripting
+
+**Disclaimer:** em construção.
+
+Overview de scrips e do ecossistema de linguagens de scripting. Falarei sobre R e Python, que tem seus livros próprios, até para contextualizar o estudo de Julia as seguir, o mais importante desta parte.
+
+Julia não receberá um livro próprio pois sua aplicação é menor no meu stack.
